@@ -15,5 +15,22 @@
     "preview": {},
     "last_modified": "2021-11-24T09:31:11+11:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2021-11-24-my-second-blog-post/",
+    "title": "My second blog post",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-11-24",
+    "categories": [],
+    "contents": "\nThis text put here by Mike.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n\n\n\n",
+    "preview": "posts/2021-11-24-my-second-blog-post/my-second-blog-post_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2021-11-24T10:22:57+11:00",
+    "input_file": "my-second-blog-post.knit.md"
   }
 ]
