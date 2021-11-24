@@ -15,32 +15,14 @@ output:
 site: distill::distill_website  
 ---
  
-I am a self-directed learner in R, Tableau and SQL, living in the Shoalhaven Area of NSW. 
-Currently I am looking for work as a data analyst. My interests include studying, statistics,
-chess, and trying to pick the perfect round in NFL.
+Hello and welcome to my blog.
 
-- Bachelor of Business Studies from Charles Sturt University (Completed 2021)
-- Bachelor of Data Analytics from University of South Australia (Commencing 2022)
+I am a self-directed learner of R, Tableau and SQL, living in the Shoalhaven Area of NSW. 
+My interests include statistics, chess, and trying to pick the perfect round in NFL.
 
-I love learning and using R and RStudio to wrangle, analyse, model, and visualise data.
-In fact, this website was created using the distill package in R. RStudio has all the tools
-I need to create RMarkdown files and push them through to GitHub. I am indebted to
-Yury Zablotski for [this video](https://www.youtube.com/watch?v=WZt4H-ogH3s) on YouTube,
-explaining how to create a blog using the distill package
-and Assoc Prof Alison Hill for [this blog post](https://www.apreshill.com/blog/2020-12-postcards-distill/)
-showing how to integrate postcards with distill.
-I am currently working my way through
-*Statistics With R: Solving Problems Using Real-World Data*
-by Jenine K. Harris. It is an excellent resource for learning both statistics
-and how to use R. My main online resource for learning R is [DataCamp](https://www.datacamp.com/).
-I also do courses on Linkedin Learning and at the moment I am watching
-*R Essential Training: Wrangling and Visualizing Data* by Barton Poulson. I am a big fan of
-Brandon Foltz [on YouTube](https://www.youtube.com/channel/UCFrjdcImgcQVyFbK04MBEhA) who
-is great at explaining statistical concepts step-by-step.
+- Bachelor of Business Studies at Charles Sturt University (Completed 2021)
+- Bachelor of Data Analytics at University of South Australia (Commencing 2022)
 
-The easiest way to contact me is probably via [Twitter](https://twitter.com/mikejhudson).
-My Twitter handle is @mikejhudson.
-Take a look at my #auspol charts while you are there. I also made a post about
-that project, if you would like to check it out on the Blog page of this site.
+
 
 This page last updated: 2021-11-24
