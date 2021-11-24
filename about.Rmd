@@ -1,9 +1,10 @@
 ---
 title: "About this blog"
 description: |
-  Some additional details about the blog
+  Just sharing some small projects and other stuff I've been doing.
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+Hope you find these posts interesting. If you'd like to you can buy me a coffee.

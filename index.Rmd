@@ -1,13 +1,13 @@
 ---
-title: "Tobi Burns"
-image: "tobi.jpg"
+title: "Mike Hudson"
+image: "Mike_Selfie_800x800.png"
 links:
   - label: LinkedIn
-    url: "https://linkedin.com/"
+    url: "https://linkedin.com/in/mikejhudson/"
   - label: Twitter
-    url: "https://twitter.com/"
+    url: "https://twitter.com/mikejhudson"
   - label: GitHub
-    url: "https://github.com/"
+    url: "https://github.com/michaelhudson2205"
   - label: Email
     url: "mailto:email@email.com"
 output:
@@ -15,6 +15,6 @@ output:
 site: distill::distill_website  
 ---
  
-I am a classically trained data scientist living in the San Francisco Bay Area. 
-Currently I work on the Oculus team at Facebook. I love talking about baseball, 
-true crime podcasts, and causal inference.
+I am a self-directed learner in R, Tableau and SQL, living in the Shoalhaven Area of NSW. 
+Currently I am looking for work as a data analyst. My interests include studying, statistics,
+chess, and trying to pick the perfect round in NFL.

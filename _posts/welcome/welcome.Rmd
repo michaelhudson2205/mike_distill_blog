@@ -4,7 +4,7 @@ description: |
   Welcome to my new blog, Blog by Mike. I hope you enjoy 
   reading what I have to say!
 author:
-  - name: Nora Jones 
+  - name: Mike Hudson 
     url: https://example.com/norajones
     affiliation: Spacely Sprockets
     affiliation_url: https://example.com/spacelysprokets
