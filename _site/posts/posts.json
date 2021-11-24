@@ -11,18 +11,18 @@
     ],
     "date": "2021-11-24",
     "categories": [],
-    "contents": "\nThis text put here by Mike.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n\n\n\n",
+    "contents": "\nThis text put here by Mike. This text added as an update.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n\n\n\n",
     "preview": "posts/2021-11-24-my-second-blog-post/my-second-blog-post_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2021-11-24T10:22:57+11:00",
+    "last_modified": "2021-11-24T15:20:42+11:00",
     "input_file": {}
   },
   {
     "path": "posts/welcome/",
     "title": "Welcome to Blog by Mike",
-    "description": "Welcome to our new blog, Blog by Mike. We hope you enjoy \nreading what we have to say!",
+    "description": "Welcome to my new blog, Blog by Mike. I hope you enjoy \nreading what I have to say!",
     "author": [
       {
-        "name": "Nora Jones",
+        "name": "Mike Hudson",
         "url": "https://example.com/norajones"
       }
     ],
@@ -30,7 +30,7 @@
     "categories": [],
     "contents": "\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-11-24T09:31:11+11:00",
+    "last_modified": "2021-11-24T15:23:01+11:00",
     "input_file": {}
   }
 ]

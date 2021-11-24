@@ -7,4 +7,4 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-Hope you find these posts interesting. If you'd like to you can buy me a coffee.
+Hope you find these posts interesting. If you'd like to, you can buy me a coffee.

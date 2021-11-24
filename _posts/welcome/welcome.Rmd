@@ -6,7 +6,7 @@ description: |
 author:
   - name: Mike Hudson 
     url: https://example.com/norajones
-    affiliation: Spacely Sprockets
+    affiliation: MassiveWombat
     affiliation_url: https://example.com/spacelysprokets
 date: 11-24-2021
 output:
