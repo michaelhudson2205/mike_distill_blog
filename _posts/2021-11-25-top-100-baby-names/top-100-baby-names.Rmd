@@ -27,7 +27,7 @@ I have the data for 2020. Just need some spare time to update the project.
 
 You can see the racing bar charts here:
 
-[Boys names](https://public.flourish.studio/visualisation/4659238/)
+[Boys names](https://public.flourish.studio/visualisation/4659238/){target="_blank"}
 
 [Girls names](https://public.flourish.studio/visualisation/4692834/)
 
