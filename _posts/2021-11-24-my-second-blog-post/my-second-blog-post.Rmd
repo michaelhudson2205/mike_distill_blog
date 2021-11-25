@@ -1,11 +1,14 @@
 ---
 title: "My second blog post"
 description: |
-  A short description of the post.
+  This is just a test post. Please ignore.
 author:
   - name: Mike Hudson
     url: https://example.com/norajones
 date: 2021-11-24
+categories:
+  - junk
+  - ignore    
 output:
   distill::distill_article:
     self_contained: false

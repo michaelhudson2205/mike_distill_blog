@@ -9,6 +9,9 @@ author:
     affiliation: MassiveWombat
     affiliation_url: https://example.com/spacelysprokets
 date: 11-24-2021
+categories:
+  - junk
+  - ignore
 output:
   distill::distill_article:
     self_contained: false

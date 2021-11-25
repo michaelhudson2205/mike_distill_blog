@@ -10,16 +10,18 @@
       }
     ],
     "date": "2021-11-25",
-    "categories": [],
+    "categories": [
+      "r project"
+    ],
     "contents": "\n\n\n\nA project I undertook to practice my data wrangling skills. NSW BDM provides the raw data in pdf format, so the biggest challenge was extracting that data into something I could work with.\nI have the data for 2020. Just need some spare time to update the project.\nYou can see the racing bar charts here:\nBoys names\nGirls names\n\n\n\n",
     "preview": "posts/2021-11-25-top-100-baby-names/top-100-baby-names.png",
-    "last_modified": "2021-11-25T23:01:34+11:00",
+    "last_modified": "2021-11-26T10:56:58+11:00",
     "input_file": {}
   },
   {
     "path": "posts/2021-11-24-my-second-blog-post/",
     "title": "My second blog post",
-    "description": "A short description of the post.",
+    "description": "This is just a test post. Please ignore.",
     "author": [
       {
         "name": "Mike Hudson",
@@ -27,14 +29,17 @@
       }
     ],
     "date": "2021-11-24",
-    "categories": [],
+    "categories": [
+      "junk",
+      "ignore"
+    ],
     "contents": "\nThis text put here by Mike. This text added as an update.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n\n\n\n",
     "preview": "posts/2021-11-24-my-second-blog-post/my-second-blog-post_files/figure-html5/unnamed-chunk-1-1.png",
-    "last_modified": "2021-11-24T15:20:42+11:00",
+    "last_modified": "2021-11-26T10:55:41+11:00",
     "input_file": {}
   },
   {
-    "path": "posts/welcome/",
+    "path": "posts/2021-11-24-welcome-to-blog-by-mike/",
     "title": "Welcome to Blog by Mike",
     "description": "Welcome to my new blog. I hope you enjoy \nreading what I have to say!",
     "author": [
@@ -44,10 +49,13 @@
       }
     ],
     "date": "2021-11-24",
-    "categories": [],
+    "categories": [
+      "junk",
+      "ignore"
+    ],
     "contents": "\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-11-25T20:45:03+11:00",
+    "last_modified": "2021-11-26T10:50:14+11:00",
     "input_file": {}
   }
 ]
