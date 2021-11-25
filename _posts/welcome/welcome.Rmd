@@ -1,7 +1,7 @@
 ---
 title: "Welcome to Blog by Mike"
 description: |
-  Welcome to my new blog, Blog by Mike. I hope you enjoy 
+  Welcome to my new blog. I hope you enjoy 
   reading what I have to say!
 author:
   - name: Mike Hudson 
