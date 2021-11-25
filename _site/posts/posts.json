@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-11-25-top-100-baby-names/",
+    "title": "Top 100 Baby Names",
+    "description": "Top 100 Baby Names registered in NSW from 1952 to 2019",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-11-25",
+    "categories": [],
+    "contents": "\nTop 100 Baby NamesA project I undertook to practice my data wrangling skills. NSW BDM provides the raw data in pdf format, so the biggest challenge was extracting that data into something I could work with.\nI have the data for 2020. Just need some spare time to update the project.\nYou can see the racing bar charts here:\nBoys names\nGirls names\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-11-25T21:07:48+11:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-11-24-my-second-blog-post/",
     "title": "My second blog post",
     "description": "A short description of the post.",
@@ -31,23 +48,6 @@
     "contents": "\n\n\n\n",
     "preview": {},
     "last_modified": "2021-11-25T20:45:03+11:00",
-    "input_file": "welcome.knit.md"
-  },
-  {
-    "path": "posts/2021-11-25-top-100-baby-names/",
-    "title": "Top 100 Baby Names",
-    "description": "Top 100 Baby Names registered in NSW from 1952 to 2019",
-    "author": [
-      {
-        "name": "Mike Hudson",
-        "url": "https://example.com/norajones"
-      }
-    ],
-    "date": "2021-11-25",
-    "categories": [],
-    "contents": "\nTop 100 Baby NamesA project I undertook to practice my data wrangling skills. NSW BDM provides the raw data in pdf format, so the biggest challenge was extracting that data into something I could work with.\nI have the data for 2020. Just need some spare time to update the project.\nYou can see the racing bar charts here:\nBoys names\nGirls names\n\n\n\n",
-    "preview": {},
-    "last_modified": "2021-11-25T21:07:48+11:00",
-    "input_file": "top-100-baby-names.knit.md"
+    "input_file": {}
   }
 ]
