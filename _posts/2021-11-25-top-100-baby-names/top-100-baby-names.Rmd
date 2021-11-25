@@ -16,7 +16,10 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![Top 100 Baby Names](top-100-baby-names.png)
+```{r}
+knitr::include_graphics("top-100-baby-names.png")
+```
+
 
 A project I undertook to practice my data wrangling skills.
 [NSW BDM](https://www.nsw.gov.au/family-and-relationships/births/popular-baby-names) 
@@ -29,6 +32,6 @@ You can see the racing bar charts here:
 
 [Boys names](https://public.flourish.studio/visualisation/4659238/){target="_blank"}
 
-[Girls names](https://public.flourish.studio/visualisation/4692834/)
+[Girls names](https://public.flourish.studio/visualisation/4692834/){target="_blank"}
 
 
