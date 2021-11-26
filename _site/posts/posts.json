@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-11-26-does-utterances-work/",
+    "title": "Does utterances work?",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-11-26",
+    "categories": [],
+    "contents": "\nTrying to get make utterances available for comments. No luck so far.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-11-26T16:03:37+11:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-11-25-top-100-baby-names/",
     "title": "Top 100 Baby Names",
     "description": "Top 100 Baby Names registered in NSW from 1952 to 2019",
@@ -15,8 +32,10 @@
     ],
     "contents": "\n\n\n\nA project I undertook to practice my data wrangling skills. NSW BDM provides the raw data in pdf format, so the biggest challenge was extracting that data into something I could work with.\nI have the data for 2020. Just need some spare time to update the project.\nYou can see the racing bar charts here:\nBoys names\nGirls names\n\n\n\n",
     "preview": "posts/2021-11-25-top-100-baby-names/top-100-baby-names.png",
-    "last_modified": "2021-11-26T10:56:58+11:00",
-    "input_file": {}
+    "last_modified": "2021-11-26T15:16:11+11:00",
+    "input_file": {},
+    "preview_width": 1528,
+    "preview_height": 736
   },
   {
     "path": "posts/2021-11-24-my-second-blog-post/",
@@ -36,7 +55,9 @@
     "contents": "\nThis text put here by Mike. This text added as an update.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n\n\n\n",
     "preview": "posts/2021-11-24-my-second-blog-post/my-second-blog-post_files/figure-html5/unnamed-chunk-1-1.png",
     "last_modified": "2021-11-26T10:55:41+11:00",
-    "input_file": {}
+    "input_file": {},
+    "preview_width": 1248,
+    "preview_height": 768
   },
   {
     "path": "posts/2021-11-24-welcome-to-blog-by-mike/",

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://mike-distill-blog.netlify.app/about.html</loc>
+    <lastmod>2021-11-24T21:47:18+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mike-distill-blog.netlify.app/blog.html</loc>
+    <lastmod>2021-11-24T14:04:14+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mike-distill-blog.netlify.app/index_old.html</loc>
+    <lastmod>2021-11-24T09:31:09+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mike-distill-blog.netlify.app/</loc>
+    <lastmod>2021-11-26T10:53:04+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mike-distill-blog.netlify.app/posts/2021-11-26-does-utterances-work/</loc>
+    <lastmod>2021-11-26T16:03:37+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names/</loc>
+    <lastmod>2021-11-26T15:16:11+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mike-distill-blog.netlify.app/posts/2021-11-24-my-second-blog-post/</loc>
+    <lastmod>2021-11-26T10:55:41+11:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mike-distill-blog.netlify.app/posts/2021-11-24-welcome-to-blog-by-mike/</loc>
+    <lastmod>2021-11-26T10:50:14+11:00</lastmod>
+  </url>
+</urlset>

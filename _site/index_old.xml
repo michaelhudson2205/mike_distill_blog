@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Blog by Mike</title>
+    <link>https://mike-distill-blog.netlify.app/</link>
+    <atom:link href="https://mike-distill-blog.netlify.app/index_old.xml" rel="self" type="application/rss+xml"/>
+    <description>Blog by Mike
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Does utterances work?</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2021-11-26-does-utterances-work</link>
+      <description>A short description of the post.</description>
+      <guid>https://mike-distill-blog.netlify.app/posts/2021-11-26-does-utterances-work</guid>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Top 100 Baby Names</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names</link>
+      <description>Top 100 Baby Names registered in NSW from 1952 to 2019</description>
+      <category>r project</category>
+      <guid>https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names</guid>
+      <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names/top-100-baby-names.png" medium="image" type="image/png" width="1528" height="736"/>
+    </item>
+    <item>
+      <title>My second blog post</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2021-11-24-my-second-blog-post</link>
+      <description>This is just a test post. Please ignore.</description>
+      <category>junk</category>
+      <category>ignore</category>
+      <guid>https://mike-distill-blog.netlify.app/posts/2021-11-24-my-second-blog-post</guid>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mike-distill-blog.netlify.app/posts/2021-11-24-my-second-blog-post/my-second-blog-post_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>Welcome to Blog by Mike</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2021-11-24-welcome-to-blog-by-mike</link>
+      <description>Welcome to my new blog. I hope you enjoy 
+reading what I have to say!</description>
+      <category>junk</category>
+      <category>ignore</category>
+      <guid>https://mike-distill-blog.netlify.app/posts/2021-11-24-welcome-to-blog-by-mike</guid>
+      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
