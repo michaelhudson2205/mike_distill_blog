@@ -8,7 +8,7 @@
 </description>
     <image>
       <title>Blog by Mike</title>
-      <url>https://mike-distill-blog.netlify.app/images/my_logo_32x32.png</url>
+      <url>https://mike-distill-blog.netlify.app/images/my_logo_405x405.png</url>
       <link>https://mike-distill-blog.netlify.app/</link>
     </image>
     <generator>Distill</generator>
@@ -30,17 +30,6 @@
       <guid>https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names</guid>
       <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names/top-100-baby-names.png" medium="image" type="image/png" width="1528" height="736"/>
-    </item>
-    <item>
-      <title>My second blog post</title>
-      <dc:creator>Mike Hudson</dc:creator>
-      <link>https://mike-distill-blog.netlify.app/posts/2021-11-24-my-second-blog-post</link>
-      <description>This is just a test post. Please ignore.</description>
-      <category>junk</category>
-      <category>ignore</category>
-      <guid>https://mike-distill-blog.netlify.app/posts/2021-11-24-my-second-blog-post</guid>
-      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mike-distill-blog.netlify.app/posts/2021-11-24-my-second-blog-post/my-second-blog-post_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
       <title>Welcome to Blog by Mike</title>

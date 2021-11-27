@@ -5,7 +5,7 @@ description: |
   Blog by Mike
 base_url: https://mike-distill-blog.netlify.app/
 output_dir: "_site"
-favicon: images/my_logo_32x32.png
+favicon: images/my_logo_405x405.png
 navbar:
   right:
     - text: "Home"
