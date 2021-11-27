@@ -6,6 +6,11 @@
     <atom:link href="https://mike-distill-blog.netlify.app/blog.xml" rel="self" type="application/rss+xml"/>
     <description>Blog by Mike
 </description>
+    <image>
+      <title>Blog by Mike</title>
+      <url>https://mike-distill-blog.netlify.app/images/my_logo_32x32.png</url>
+      <link>https://mike-distill-blog.netlify.app/</link>
+    </image>
     <generator>Distill</generator>
     <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate>
     <item>
