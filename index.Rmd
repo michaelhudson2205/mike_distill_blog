@@ -1,6 +1,7 @@
 ---
 title: "Mike Hudson"
 image: "Mike_Selfie_800x800.png"
+favicon: images/my_logo_405x405.png
 links:
   - label: LinkedIn
     url: "https://linkedin.com/in/mikejhudson/"
