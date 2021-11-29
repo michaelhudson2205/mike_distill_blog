@@ -5,7 +5,6 @@ description: |
   Blog by Mike
 base_url: https://mike-distill-blog.netlify.app/
 output_dir: "_site"
-favicon: images/my_logo_405x405.png
 navbar:
   right:
     - text: "Home"
@@ -21,6 +20,7 @@ output:
   distill::distill_article:
     includes:
       in_header: 
+      - buy_me_a_coffee.html
       - utterances.html
 twitter:
   site: "@mikejhudson"
