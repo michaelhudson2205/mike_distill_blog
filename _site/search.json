@@ -6,28 +6,28 @@
       "description": "Just sharing some small projects and other stuff I've been doing.",
       "author": [],
       "contents": "\nI love learning and using R and RStudio to wrangle, analyse, model, and visualise data. In fact, this website was created using the distill package in R. RStudio has all the tools I need to create RMarkdown files and push them through to GitHub. I am indebted to Yury Zablotski for this video on YouTube, explaining how to create a blog using the distill package and Assoc Prof Alison Hill for this blog post showing how to integrate postcards with distill. I am currently working my way through Statistics With R: Solving Problems Using Real-World Data by Jenine K. Harris. It is an excellent resource for learning both statistics and how to use R. My main online resource for learning R is DataCamp. I also do courses on Linkedin Learning and at the moment I am watching R Essential Training: Wrangling and Visualizing Data by Barton Poulson. I am a big fan of Brandon Foltz on YouTube who is great at explaining statistical concepts step-by-step.\nThe easiest way to contact me is probably via Twitter. My Twitter handle is @mikejhudson. Take a look at my #auspol charts while you are there. I also made a post about that project, if you would like to check it out on the Blog page of this site.\nI hope you find these posts interesting. If you’d like to, you can buy me a coffee.\nThis page last updated: 2021-11-24\n\n\n\n",
-      "last_modified": "2021-11-27T12:59:05+11:00"
+      "last_modified": "2021-11-29T20:24:28+11:00"
     },
     {
       "path": "blog.html",
       "title": "Blog by Mike",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-11-27T12:59:06+11:00"
+      "last_modified": "2021-11-29T20:24:28+11:00"
     },
     {
       "path": "index_old.html",
       "title": "Blog by Mike",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-11-27T12:59:06+11:00"
+      "last_modified": "2021-11-29T20:24:29+11:00"
     },
     {
       "path": "index.html",
       "title": "Mike Hudson",
       "author": [],
       "contents": "\n\n          \n          \n          Blog by Mike\n          \n          \n          Home\n          About\n          Blog\n          ☰\n          \n          \n      \n        \n          \n            \n              \n            \n              Mike Hudson\n            \n            \n              \n                \n                    \n                      \n                        LinkedIn\n                      \n                    \n                  \n                                    \n                    \n                      \n                        Twitter\n                      \n                    \n                  \n                                    \n                    \n                      \n                        GitHub\n                      \n                    \n                  \n                                    \n                    \n                      \n                        Email\n                      \n                    \n                  \n                                  \n            \n          \n        \n        \n        \n          \n            Hello and welcome to my blog.\n            I am a self-directed learner of R, Tableau and SQL, living in the Shoalhaven Area of NSW. My interests include statistics, chess, and trying to pick the perfect round in NFL.\n            Bachelor of Business Studies at Charles Sturt University (Completed 2021)\n            Bachelor of Data Analytics at University of South Australia (Commencing 2022)\n            This page last updated: 2021-11-24\n          \n        \n      \n    \n\n    \n      \n        \n          \n            \n              \n            \n              Mike Hudson\n            \n            \n              \n                \n                                    \n                    \n                      LinkedIn\n                    \n                  \n                                    \n                    \n                      Twitter\n                    \n                  \n                                    \n                    \n                      GitHub\n                    \n                  \n                                    \n                    \n                      Email\n                    \n                  \n                                  \n              \n            \n            \n              Hello and welcome to my blog.\n              I am a self-directed learner of R, Tableau and SQL, living in the Shoalhaven Area of NSW. My interests include statistics, chess, and trying to pick the perfect round in NFL.\n              Bachelor of Business Studies at Charles Sturt University (Completed 2021)\n              Bachelor of Data Analytics at University of South Australia (Commencing 2022)\n              This page last updated: 2021-11-24\n            \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2021-11-27T13:11:54+11:00"
+      "last_modified": "2021-11-29T20:24:29+11:00"
     }
   ],
   "collections": ["posts/posts.json"]
