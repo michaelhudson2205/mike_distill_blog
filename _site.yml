@@ -16,11 +16,11 @@ navbar:
 collections:
   posts:
     share: [twitter, linkedin]
+    subscribe: buy_me_a_coffee.html
 output:
   distill::distill_article:
     includes:
       in_header: 
-      - buy_me_a_coffee.html
       - utterances.html
 twitter:
   site: "@mikejhudson"
