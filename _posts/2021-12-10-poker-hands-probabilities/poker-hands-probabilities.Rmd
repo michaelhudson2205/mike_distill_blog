@@ -1,0 +1,114 @@
+---
+title: "Poker Hands Probabilities"
+description: |
+  Computing the probabilities of different hands in draw poker.
+author:
+  - name: Mike Hudson
+    url: https://example.com/norajones
+date: 2021-12-10
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### Relevance to Data Analytics Skills
+* Using RMarkdown
+* Using LaTeX in RMarkdown
+* Using HTML in RMarkdown
+* Using R code
+* Ability to explain statistical concept
+* Ability to explain other people's code
+* Ability to find resources online
+
+---
+### To the project...
+I thought it would be an interesting exercise to use R to explain and analyse the probabilities of different hands in draw poker. In this exercise, a hand of poker consists of five cards drawn randomly without replacement from a single, well-shuffled deck of 52 cards. The total number of possible five card hands, drawn from a 52 card deck without replacement and given that order does not matter, is:<br>
+
+\begin{align*}
+Total\ number\ of\ possible\ poker\ hands = 52C5 & = \frac{52!}{5! \times 47!} \\
+\\
+& = \frac{52 \times 51 \times 50 \times 49 \times 48}{5 \times 4 \times 3 \times 2 \times 1} \\
+\\
+& = 2,598,960
+\end{align*}
+
+<br>
+
+The poker hands of interest are:<br>
+
+<table style="width: 100%">
+    <colgroup>
+        <col style="width: 7%;">
+        <col style="width: 17%;">
+        <col style="width: 76%;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th style="text-align:left;">Rank</th>
+            <th style="text-align:left;">Name</th>
+            <th style="text-align:left;">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align:left;">1</td>
+            <td style="text-align:left;">Royal flush</td>
+            <td style="text-align:left;">The hand contains the A, K, Q, J and 10 of the same suit.</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">2</td>
+            <td style="text-align:left;">Straight flush</td>
+            <td style="text-align:left;">The hand contains five cards of the same suit with consecutive values. A can come before a 2, but not after K (as the hand would then be a Royal Flush).</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">3</td>
+            <td style="text-align:left;">Four of a kind</td>
+            <td style="text-align:left;">The hand contains four cards of the same rank (one for each suit)</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">4</td>
+            <td style="text-align:left;">Full house</td>
+            <td style="text-align:left;">The hand contains three cards of one rank and two cards of a different rank.</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">5</td>
+            <td style="text-align:left;">Flush</td>
+            <td style="text-align:left;">The hand contains five cards of the same suit, but not a Straight Flush.</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">6</td>
+            <td style="text-align:left;">Straight</td>
+            <td style="text-align:left;">The hand contains five cards with consecutive ranks that are not a Straight Flush.</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">7</td>
+            <td style="text-align:left;">Three of a kind</td>
+            <td style="text-align:left;">The hand contains three cards of the same rank and is not a Full House or Four of a Kind.</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">8</td>
+            <td style="text-align:left;">Two pairs</td>
+            <td style="text-align:left;">The hand contains two pairs, each of a different rank.</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">9</td>
+            <td style="text-align:left;">One pair</td>
+            <td style="text-align:left;">The hand contains two cards of the same rank and is not a Full House or Four of a Kind.</td>
+        </tr>
+        <tr>
+            <td style="text-align:left;">10</td>
+            <td style="text-align:left;">Highest card</td>
+            <td style="text-align:left;">The hand is not any of the above.</td>
+        </tr>
+    </tbody>
+</table>
+
+This blog post draws from the following resources:<br>
+* Rodriguez, Abel & Mendes, Bruno. 2018 Probability, Decisions and Games: A Gentle Introduction Using R, John Wiley & Sons.
+
+

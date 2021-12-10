@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-12-10-poker-hands-probabilities/",
+    "title": "Poker Hands Probabilities",
+    "description": "Computing the probabilities of different hands in draw poker.",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-12-10",
+    "categories": [],
+    "contents": "\nRelevance to Data Analytics Skills\nUsing RMarkdown\nUsing LaTeX in RMarkdown\nUsing HTML in RMarkdown\nUsing R code\nAbility to explain well known topic in a fresh, informative way\nAbility to explain other people’s code\nAbility to find informational resources online\nTo the project…\nI thought it would be an interesting exercise to use R to explain and analyse the probabilities of different hands in draw poker. In this exercise, a hand of poker consists of five cards drawn randomly without replacement from a single, well-shuffled deck of 52 cards. The total number of possible five card hands, drawn from a 52 card deck without replacement and given that order does not matter, is:\n\\[\\begin{align*}\nTotal\\ number\\ of\\ possible\\ poker\\ hands = 52C5 & = \\frac{52!}{5! \\times 47!} \\\\\n\\\\\n& = \\frac{52 \\times 51 \\times 50 \\times 49 \\times 48}{5 \\times 4 \\times 3 \\times 2 \\times 1} \\\\\n\\\\\n& = 2,598,960\n\\end{align*}\\]\n\nThe poker hands of interest are:\n\nRank\n\n\nName\n\n\nDescription\n\n\n1\n\n\nRoyal flush\n\n\nThe hand contains the A, K, Q, J and 10 of the same suit.\n\n\n2\n\n\nStraight flush\n\n\nThe hand contains five cards of the same suit with consecutive values. A can come before a 2, but not after K (as the hand would then be a Royal Flush).\n\n\n3\n\n\nFour of a kind\n\n\nThe hand contains four cards of the same rank (one for each suit)\n\n\n4\n\n\nFull house\n\n\nThe hand contains three cards of one rank and two cards of a different rank.\n\n\n5\n\n\nFlush\n\n\nThe hand contains five cards of the same suit, but not a Straight Flush.\n\n\n6\n\n\nStraight\n\n\nThe hand contains five cards with consecutive ranks that are not a Straight Flush.\n\n\n7\n\n\nThree of a kind\n\n\nThe hand contains three cards of the same rank and is not a Full House or Four of a Kind.\n\n\n8\n\n\nTwo pairs\n\n\nThe hand contains two pairs, each of a different rank.\n\n\n9\n\n\nOne pair\n\n\nThe hand contains two cards of the same rank and is not a Full House or Four of a Kind.\n\n\n10\n\n\nHighest card\n\n\nThe hand is not any of the above.\n\nThis blog post draws from the following resources: * Rodriguez, Abel & Mendes, Bruno. 2018 Probability, Decisions and Games: A Gentle Introduction Using R, John Wiley & Sons.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-12-10T23:14:18+11:00",
+    "input_file": "poker-hands-probabilities.knit.md"
+  },
+  {
     "path": "posts/2021-11-26-does-utterances-work/",
     "title": "Does utterances work?",
     "description": "A short description of the post.",

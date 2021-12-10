@@ -7,7 +7,15 @@
     <description>Blog by Mike
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 26 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Poker Hands Probabilities</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2021-12-10-poker-hands-probabilities</link>
+      <description>Computing the probabilities of different hands in draw poker.</description>
+      <guid>https://mike-distill-blog.netlify.app/posts/2021-12-10-poker-hands-probabilities</guid>
+      <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Does utterances work?</title>
       <dc:creator>Mike Hudson</dc:creator>
