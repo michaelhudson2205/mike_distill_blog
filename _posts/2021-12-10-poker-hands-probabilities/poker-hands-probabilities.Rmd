@@ -426,7 +426,17 @@ On any given hand, there is on average a 42% chance of being dealt One Pair.
     </tbody>
 </table>
 
+### Simulation Using R
+
+First, create an object to hold the deck.
+```{r}
+deck <- matrix(c(rep(c(2:10, "J", "Q", "K", "A"), 4), rep(c("C", "D", "H", "S"), rep(13, 4))),
+               ncol = 2, dimnames = list(NULL, c("rank", "suit")))
+```
+
+
 This blog post draws from the following resources:<br>
 
-* Rodriguez, Abel & Mendes, Bruno. (2018). *Probability, Decisions and Games: A Gentle Introduction Using R*, John Wiley & Sons.
-* [Stat Trek: Teach yourself statistics]("https://stattrek.com/poker/poker-probability.aspx?tutorial=prob"){target="_blank"}
+- Rodriguez, Abel & Mendes, Bruno. (2018). *Probability, Decisions and Games: A Gentle Introduction Using R*, John Wiley & Sons.
+- [Stat Trek: Teach yourself statistics]("https://stattrek.com/poker/poker-probability.aspx?tutorial=prob"){target="_blank"}
+- [Duke University: Department of Statistical Science]("https://www2.stat.duke.edu/courses/Spring12/sta104.1/Homework/poker_simulation.R"){target="_blank}
