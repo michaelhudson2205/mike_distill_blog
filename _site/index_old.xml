@@ -13,17 +13,12 @@
       <dc:creator>Mike Hudson</dc:creator>
       <link>https://mike-distill-blog.netlify.app/posts/2021-12-10-poker-hands-probabilities</link>
       <description>Poker as a statistical experiment.</description>
+      <category>probability</category>
+      <category>html</category>
+      <category>LaTeX</category>
       <guid>https://mike-distill-blog.netlify.app/posts/2021-12-10-poker-hands-probabilities</guid>
       <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mike-distill-blog.netlify.app/posts/2021-12-10-poker-hands-probabilities/Poker_Hands_1200x754.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Does utterances work?</title>
-      <dc:creator>Mike Hudson</dc:creator>
-      <link>https://mike-distill-blog.netlify.app/posts/2021-11-26-does-utterances-work</link>
-      <description>A short description of the post.</description>
-      <guid>https://mike-distill-blog.netlify.app/posts/2021-11-26-does-utterances-work</guid>
-      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Top 100 Baby Names</title>
@@ -34,17 +29,6 @@
       <guid>https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names</guid>
       <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names/top-100-baby-names.png" medium="image" type="image/png" width="1528" height="736"/>
-    </item>
-    <item>
-      <title>Welcome to Blog by Mike</title>
-      <dc:creator>Mike Hudson</dc:creator>
-      <link>https://mike-distill-blog.netlify.app/posts/2021-11-24-welcome-to-blog-by-mike</link>
-      <description>Welcome to my new blog. I hope you enjoy 
-reading what I have to say!</description>
-      <category>junk</category>
-      <category>ignore</category>
-      <guid>https://mike-distill-blog.netlify.app/posts/2021-11-24-welcome-to-blog-by-mike</guid>
-      <pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

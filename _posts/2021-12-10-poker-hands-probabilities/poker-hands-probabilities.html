@@ -112,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Poker Hands Probabilities"]},{"type":"character","attributes":{},"value":["Poker as a statistical experiment.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Mike Hudson"]},{"type":"character","attributes":{},"value":["https://mike-distill-blog.netlify.app/"]}]}]},{"type":"character","attributes":{},"value":["2021-12-10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","categories","output"]}},"value":[{"type":"character","attributes":{},"value":["Poker Hands Probabilities"]},{"type":"character","attributes":{},"value":["Poker as a statistical experiment.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Mike Hudson"]},{"type":"character","attributes":{},"value":["https://mike-distill-blog.netlify.app/"]}]}]},{"type":"character","attributes":{},"value":["2021-12-10"]},{"type":"character","attributes":{},"value":["probability","html","LaTeX"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1471,6 +1471,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-title">
 <h1>Poker Hands Probabilities</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">probability</div>
+<div class="dt=tag">html</div>
+<div class="dt=tag">LaTeX</div>
+</div>
 <!--/radix_placeholder_categories-->
 <p><p>Poker as a statistical experiment.</p></p>
 </div>
@@ -1845,7 +1850,7 @@ Number\ of\ One\ Pair\ hands &amp; = {_{13}C_1} \times {_{12}C_3} \times {_4C_2}
 <p>Finally, we compute the probability. <span class="math display">\[P(One\ Pair) = \frac{1,098,240}{2,598,960} = 0.42256902761\]</span></p>
 <p>On any given hand, there is on average a 42% chance of being dealt One Pair.</p>
 <h3 id="summary-table">Summary Table</h3>
-<h4 id="unique-hands-from-a-52-card-deck">(2,598,960 unique hands from a 52 card deck)</h4>
+<p><strong>(2,598,960 unique hands from a 52 card deck)</strong></p>
 <table style="width: 100%">
 <colgroup>
 <col style="width: 12%;">
@@ -1863,13 +1868,13 @@ Rank
 Name
 </th>
 <th style="text-align:right;">
-Number
+Count
 </th>
 <th style="text-align:right;">
 Probabilty
 </th>
 <th style="text-align:right;">
-Deals
+Avg.Deals
 </th>
 </tr>
 </thead>
@@ -2015,7 +2020,7 @@ Two Pairs
 9
 </td>
 <td style="text-align:left;">
-One pair
+One Pair
 </td>
 <td style="text-align:right;">
 1,098,240
@@ -2029,6 +2034,92 @@ One pair
 </tr>
 </tbody>
 </table>
+<h3 id="simulation-using-r">Simulation Using R</h3>
+<p>The following R code is heavily based on the code I found at the Duke University site, link at the end of this blog post. That source code comes without explanation and without any comments. I attempt to rectify that by providing interpretation and making clear what is going on. I am not an R expert so please accept that this is a learning exercise for me, but your feedback and suggestions are welcome!</p>
+<p>First, create an object to hold the deck.</p>
+<p>I found the code from Duke Uni a little confusing, so I used the following. It may be verbose but its easier to understand:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>rank</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>:</span><span class='fl'>10</span>, <span class='st'>"J"</span>, <span class='st'>"Q"</span>, <span class='st'>"K"</span>, <span class='st'>"A"</span><span class='op'>)</span>, <span class='fl'>4</span><span class='op'>)</span>
+<span class='va'>suit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"C"</span> ,<span class='st'>"D"</span> ,<span class='st'>"H"</span> ,<span class='st'>"S"</span><span class='op'>)</span>, each <span class='op'>=</span> <span class='fl'>13</span><span class='op'>)</span>
+<span class='va'>deck</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>rank</span>, <span class='va'>suit</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>You can find a good explanation of the rep function at <a href="%22https://www.youtube.com/watch?v=gBthn0xeubs%22" target="_blank">Statistics Globe</a>, and I would recommend that YouTube channel for learning about using R.</p>
+<p>Next, we construct three functions. One for dealing a single hand of five cards, drawn at random from our deck. Another function for determining what kind of hand has been dealt, for example Full House, Straight, etc, or if nothing higher, High Card. The third function is for simulating user determined numbers of deals and returning the number of each kind of hand dealt in that simulation.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># a function that returns a random hand of 5 cards drawn from our deck of 52 cards</span>
+<span class='va'>deal_hand</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>deck</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>52</span>, <span class='fl'>5</span>, replace <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>,<span class='op'>]</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># a function that determines what kind oh hand has been dealt</span>
+<span class='va'>what_hand</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hand</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>ranks_acehigh</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>:</span><span class='fl'>10</span>, <span class='st'>"J"</span>, <span class='st'>"Q"</span>, <span class='st'>"K"</span>, <span class='st'>"A"</span><span class='op'>)</span>
+    <span class='va'>ranks_acelow</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"A"</span>, <span class='fl'>2</span><span class='op'>:</span><span class='fl'>10</span>, <span class='st'>"J"</span>, <span class='st'>"Q"</span>, <span class='st'>"K"</span><span class='op'>)</span>
+    
+    <span class='va'>rank_i_ah</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>hand</span><span class='op'>[</span>, <span class='st'>"rank"</span><span class='op'>]</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>==</span> <span class='va'>ranks_acehigh</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>rank_i_al</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>hand</span><span class='op'>[</span>, <span class='st'>"rank"</span><span class='op'>]</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>==</span> <span class='va'>ranks_acelow</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+    
+    <span class='va'>is_straight</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/all.html'>all</a></span><span class='op'>(</span><span class='va'>rank_i_ah</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>rank_i_ah</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>1</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>)</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/all.html'>all</a></span><span class='op'>(</span><span class='va'>rank_i_al</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>rank_i_al</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>1</span> <span class='op'>==</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>)</span>
+    <span class='va'>is_flush</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>hand</span><span class='op'>[</span>, <span class='st'>"suit"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>==</span> <span class='fl'>1</span>
+    
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>is_straight</span> <span class='op'>&amp;&amp;</span> <span class='va'>is_flush</span><span class='op'>)</span><span class='op'>{</span>
+        <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/all.html'>all</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"K"</span>, <span class='st'>"A"</span><span class='op'>)</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>hand</span><span class='op'>[</span>, <span class='st'>"rank"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"Royal Flush"</span><span class='op'>)</span>
+        <span class='kw'>else</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"Straight Flush"</span><span class='op'>)</span>
+    <span class='op'>}</span>
+    
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>is_straight</span><span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"Straight"</span><span class='op'>)</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>is_flush</span><span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"Flush"</span><span class='op'>)</span>
+    
+    <span class='va'>tab</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>hand</span><span class='op'>[</span>, <span class='st'>"rank"</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>tab</span><span class='op'>)</span> <span class='op'>==</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>{</span>
+        <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/all.html'>all</a></span><span class='op'>(</span><span class='va'>tab</span> <span class='op'>==</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"Four of a Kind"</span><span class='op'>)</span>
+        <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/all.html'>all</a></span><span class='op'>(</span><span class='va'>tab</span> <span class='op'>==</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"Full House"</span><span class='op'>)</span>
+    <span class='op'>}</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>tab</span><span class='op'>)</span> <span class='op'>==</span> <span class='fl'>3</span><span class='op'>)</span><span class='op'>{</span>
+        <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/all.html'>all</a></span><span class='op'>(</span><span class='va'>tab</span> <span class='op'>==</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"Three of a Kind"</span><span class='op'>)</span>
+        <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/all.html'>all</a></span><span class='op'>(</span><span class='va'>tab</span> <span class='op'>==</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"Two Pairs"</span><span class='op'>)</span>
+    <span class='op'>}</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>tab</span><span class='op'>)</span> <span class='op'>==</span> <span class='fl'>4</span><span class='op'>)</span><span class='op'>{</span>
+        <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"One Pair"</span><span class='op'>)</span>
+    <span class='op'>}</span>
+    <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='st'>"High Card"</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># a function that counts the different kinds of poker hands from a simulation of N number of deals</span>
+<span class='va'>simulate_deals</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>N</span> <span class='op'>=</span> <span class='fl'>10000</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>hands</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Royal Flush"</span>, <span class='st'>"Straight Flush"</span>, <span class='st'>"Four of a Kind"</span>,
+              <span class='st'>"Full House"</span>, <span class='st'>"Flush"</span>, <span class='st'>"Straight"</span>, <span class='st'>"Three of a Kind"</span>,
+              <span class='st'>"Two Pairs"</span>, <span class='st'>"One Pair"</span>, <span class='st'>"High Card"</span><span class='op'>)</span>
+    
+    <span class='va'>res</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>hands</span><span class='op'>)</span><span class='op'>)</span>, ncol <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span> <span class='op'>=</span> <span class='va'>hands</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span> <span class='op'>=</span> <span class='st'>"Counts"</span>
+    
+    <span class='va'>pb</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/utils/txtProgressBar.html'>txtProgressBar</a></span><span class='op'>(</span>min <span class='op'>=</span> <span class='fl'>0</span>, max <span class='op'>=</span> <span class='va'>N</span>, style <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
+    <span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>N</span><span class='op'>)</span><span class='op'>{</span>
+        <span class='va'>hand</span> <span class='op'>=</span> <span class='fu'>what_hand</span><span class='op'>(</span><span class='fu'>deal_hand</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+        <span class='va'>res</span><span class='op'>[</span><span class='va'>hand</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>=</span> <span class='va'>res</span><span class='op'>[</span><span class='va'>hand</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span> <span class='fl'>1</span>
+        <span class='fu'><a href='https://rdrr.io/r/utils/txtProgressBar.html'>setTxtProgressBar</a></span><span class='op'>(</span><span class='va'>pb</span>, <span class='va'>i</span><span class='op'>)</span>
+    <span class='op'>}</span>
+    <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<h3 id="wrap-up">Wrap-up</h3>
+<p>This little project was well worth the effort. Using HTML and LaTeX within RMarkdown takes some doing but knowing how to format and set out tables and formulas is necessary in order to produce a post that entices the reader to spend their time looking it over. Like anything, practice makes perfect, and that’s especially true for RMarkdown and coming to terms with all its idiosynchracies. Also, going over the R code from Duke was tremendously beneficial in learning how to use base R efficiently and how to construct functions that flow logically. If you’ve read this far, I thank you for your time and interest in looking at my blog. :-) Mike</p>
 <p>This blog post draws from the following resources:<br></p>
 <ul>
 <li>Rodriguez, Abel &amp; Mendes, Bruno. (2018). <em>Probability, Decisions and Games: A Gentle Introduction Using R</em>, John Wiley &amp; Sons.</li>
