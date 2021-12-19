@@ -185,6 +185,7 @@ m1 <- leaflet(width = "100%") %>%
     options = searchFeaturesOptions(zoom = 20)
   ) %>%
   addResetMapButton() %>% 
+  addFullscreenControl() %>% 
   addLegend(position = "bottomright",
             pal = pal,
             values = c("Nowra","Ulladulla"))
