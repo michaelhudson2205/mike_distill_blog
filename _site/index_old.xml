@@ -7,7 +7,20 @@
     <description>Blog by Mike
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 09 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Creating a leaflet map in R</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2021-12-19-creating-a-leaflet-map-in-r</link>
+      <description>Using an API to access geospatial data.</description>
+      <category>API</category>
+      <category>Google Maps</category>
+      <category>Leaflet</category>
+      <category>htmlwidgets</category>
+      <guid>https://mike-distill-blog.netlify.app/posts/2021-12-19-creating-a-leaflet-map-in-r</guid>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mike-distill-blog.netlify.app/posts/2021-12-19-creating-a-leaflet-map-in-r/blog_image_1200x636.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Poker Hands Probabilities</title>
       <dc:creator>Mike Hudson</dc:creator>
@@ -17,7 +30,7 @@
       <category>html</category>
       <category>LaTeX</category>
       <guid>https://mike-distill-blog.netlify.app/posts/2021-12-10-poker-hands-probabilities</guid>
-      <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Dec 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mike-distill-blog.netlify.app/posts/2021-12-10-poker-hands-probabilities/Poker_Hands_1200x754.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
