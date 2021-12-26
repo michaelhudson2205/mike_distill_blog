@@ -1,0 +1,32 @@
+---
+title: "Titanic Dataset Analysis - Part 1"
+description: |
+  These common projects can hurt you...
+author:
+  - name: Mike Hudson
+    url: https://mike-distill-blog.netlify.app/
+date: 2021-12-26
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r map-image}
+knitr::include_graphics("titanic_part_1.png")
+```
+
+
+### Relevance to Data Analytics Skills
+* Using RMarkdown
+* Data wrangling
+* Using R code
+
+---
+### To the project...
+
+

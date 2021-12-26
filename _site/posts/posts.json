@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2021-12-26-titanic-dataset-analysis-part-1/",
+    "title": "Titanic Dataset Analysis - Part 1",
+    "description": "These common projects can hurt you...",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://mike-distill-blog.netlify.app/"
+      }
+    ],
+    "date": "2021-12-26",
+    "categories": [],
+    "contents": "\n\n\n\nRelevance to Data Analytics Skills\nUsing RMarkdown\nData wrangling\nUsing R code\nTo the project…\n\n\n\n",
+    "preview": "posts/2021-12-26-titanic-dataset-analysis-part-1/titanic_part_1.png",
+    "last_modified": "2021-12-26T18:16:24+11:00",
+    "input_file": "titanic-dataset-analysis-part-1.knit.md",
+    "preview_width": 1200,
+    "preview_height": 800
+  },
+  {
     "path": "posts/2021-12-19-creating-a-leaflet-map-in-r/",
     "title": "Creating a leaflet map in R",
     "description": "Using an API to access geospatial data.",

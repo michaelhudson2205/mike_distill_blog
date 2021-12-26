@@ -7,7 +7,16 @@
     <description>Blog by Mike
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Titanic Dataset Analysis - Part 1</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2021-12-26-titanic-dataset-analysis-part-1</link>
+      <description>These common projects can hurt you...</description>
+      <guid>https://mike-distill-blog.netlify.app/posts/2021-12-26-titanic-dataset-analysis-part-1</guid>
+      <pubDate>Sat, 25 Dec 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mike-distill-blog.netlify.app/posts/2021-12-26-titanic-dataset-analysis-part-1/titanic_part_1.png" medium="image" type="image/png" width="1200" height="800"/>
+    </item>
     <item>
       <title>Creating a leaflet map in R</title>
       <dc:creator>Mike Hudson</dc:creator>
@@ -18,7 +27,7 @@
       <category>Leaflet</category>
       <category>htmlwidgets</category>
       <guid>https://mike-distill-blog.netlify.app/posts/2021-12-19-creating-a-leaflet-map-in-r</guid>
-      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mike-distill-blog.netlify.app/posts/2021-12-19-creating-a-leaflet-map-in-r/blog_image_1200x636.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
