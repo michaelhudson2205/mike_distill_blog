@@ -23,10 +23,44 @@ knitr::include_graphics("titanic_part_1.png")
 
 ### Relevance to Data Analytics Skills
 * Using RMarkdown
-* Data wrangling
+* Data wrangling including dealing with missing values
 * Using R code
 
 ---
+[KDnuggets](https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html) has this to say about projects ideas **not** to include in a data science portfolio.
+
+> It's suggested not to have common projects in your portfolio. You need to stay away from the most common project ideas when building a portfolio. Try to come up with something that will truly set you apart from the others.
+>
+> Here are a few most common projects that can hurt you if you include them in your data science portfolio:
+
+> 1. *Survival classification on the Titanic dataset.*
+> 2. *Digit classification on the MNIST dataset.*
+> 3. *Flower species classification using the iris dataset.*
+>
+> These are the most common projects that can hurt you more than they help you. You can't find ways to distinguish yourself from others using these datasets. You have to make sure to list novel projects to stand out from the rest.
+
+Well, I am not so sure about that although I accept the point that is being made. The Titanic dataset is so ubiquitous in tutorials for data exploration and, later on, for developing an understanding of the principles of machine learning, it seems that for sure, everybody in data science has seen it or at least heard about it, and has probably cut their data analytics teeth on it themselves. Nevertheless,  it is such a rich resource for learning that I felt compelled to include it in my blog, as a multipart series. I hope you find it interesting and if you've seen it all before, my apologies.
+
+### Preamble
+Information drawn from [kaggle](https://www.kaggle.com/c/titanic/overview) :
+
+The sinking of the Titanic is one of the most infamous shipwrecks in history.
+
+On April 15, 1912, during her maiden voyage, the widely considered "unsinkable" RMS Titanic sank after colliding with an iceberg. Unfortunately, there were not enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew.
+
+While there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others.
+
+In Kaggle's Titanic Machine Learning Competition, participants are asked to build a predictive model that answers the question: "what sorts of people were more likely to survive?" using passenger data (i.e., name, age, gender socio-economic class, etc.). Participants gain access to two similar datasets that include the passenger information. One dataset is titled "train.csv" and the other is titled test.csv". The "train.csv" dataset contains details of a subset of 891 passengers on board and importantly, reveals whether they survived or not, also known as the "ground truth". The "test.csv" dataset contains similar information but does not disclose the "ground truth" for each passenger. Using the patterns found in the train.csv data, participants seek to predict whether the other subset of 418 passengers on board, found in test.csv, survived.
+
+In this blog post I do some data exploration of the train.csv dataset.
+
 ### To the project...
 
 
+Resources
+
+https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html
+
+https://www.kaggle.com/c/titanic/overview
+
+https://medium.com/swlh/basic-exploratory-data-analysis-of-titanic-data-using-r-53d4b764ec89
