@@ -135,7 +135,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["titanic_part_1.png","titanic-dataset-analysis-part-1_files/anchor-4.2.2/anchor.min.js","titanic-dataset-analysis-part-1_files/bowser-1.9.3/bowser.min.js","titanic-dataset-analysis-part-1_files/distill-2.2.21/template.v2.js","titanic-dataset-analysis-part-1_files/header-attrs-2.11.3/header-attrs.js","titanic-dataset-analysis-part-1_files/jquery-3.6.0/jquery-3.6.0.js","titanic-dataset-analysis-part-1_files/jquery-3.6.0/jquery-3.6.0.min.js","titanic-dataset-analysis-part-1_files/jquery-3.6.0/jquery-3.6.0.min.map","titanic-dataset-analysis-part-1_files/popper-2.6.0/popper.min.js","titanic-dataset-analysis-part-1_files/tippy-6.2.7/tippy-bundle.umd.min.js","titanic-dataset-analysis-part-1_files/tippy-6.2.7/tippy-light-border.css","titanic-dataset-analysis-part-1_files/tippy-6.2.7/tippy.css","titanic-dataset-analysis-part-1_files/tippy-6.2.7/tippy.umd.min.js","titanic-dataset-analysis-part-1_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["titanic_data/gender_submission.csv","titanic_data/test.csv","titanic_data/train.csv","Titanic_Data_Dictionary.csv","titanic_part_1.png","titanic-dataset-analysis-part-1_files/anchor-4.2.2/anchor.min.js","titanic-dataset-analysis-part-1_files/bowser-1.9.3/bowser.min.js","titanic-dataset-analysis-part-1_files/distill-2.2.21/template.v2.js","titanic-dataset-analysis-part-1_files/figure-html5/age-density-plot-1.png","titanic-dataset-analysis-part-1_files/figure-html5/missingness_map-1.png","titanic-dataset-analysis-part-1_files/figure-html5/survival-pclass-plot-1.png","titanic-dataset-analysis-part-1_files/figure-html5/survived-count-plot-1.png","titanic-dataset-analysis-part-1_files/figure-html5/survived-count-sex-plot-1.png","titanic-dataset-analysis-part-1_files/figure-html5/unnamed-chunk-9-1.png","titanic-dataset-analysis-part-1_files/header-attrs-2.11.3/header-attrs.js","titanic-dataset-analysis-part-1_files/jquery-3.6.0/jquery-3.6.0.js","titanic-dataset-analysis-part-1_files/jquery-3.6.0/jquery-3.6.0.min.js","titanic-dataset-analysis-part-1_files/jquery-3.6.0/jquery-3.6.0.min.map","titanic-dataset-analysis-part-1_files/kePrint-0.0.1/kePrint.js","titanic-dataset-analysis-part-1_files/lightable-0.0.1/lightable.css","titanic-dataset-analysis-part-1_files/popper-2.6.0/popper.min.js","titanic-dataset-analysis-part-1_files/tippy-6.2.7/tippy-bundle.umd.min.js","titanic-dataset-analysis-part-1_files/tippy-6.2.7/tippy-light-border.css","titanic-dataset-analysis-part-1_files/tippy-6.2.7/tippy.css","titanic-dataset-analysis-part-1_files/tippy-6.2.7/tippy.umd.min.js","titanic-dataset-analysis-part-1_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2463,12 +2463,19 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 <h3 id="relevance-to-data-analytics-skills">Relevance to Data Analytics Skills</h3>
 <ul>
-<li>Using RMarkdown</li>
-<li>Data wrangling including dealing with missing values</li>
+<li>Using RMarkdown
+<ul>
+<li>Formatting tables with gt package</li>
+</ul></li>
 <li>Using R code</li>
+<li>Data wrangling
+<ul>
+<li>Dealing with missing values</li>
+<li>Imputation</li>
+</ul></li>
 </ul>
 <hr />
-<p><a href="https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html">KDnuggets</a> has this to say about projects ideas <strong>not</strong> to include in a data science portfolio.</p>
+<p><a href="https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html" target="_blank">KDnuggets</a> has this to say about projects ideas <strong>not</strong> to include in a data science portfolio.</p>
 <blockquote>
 <p>It’s suggested not to have common projects in your portfolio. You need to stay away from the most common project ideas when building a portfolio. Try to come up with something that will truly set you apart from the others.</p>
 <p>Here are a few most common projects that can hurt you if you include them in your data science portfolio:</p>
@@ -2483,18 +2490,668 @@ d-appendix d-footnote-list a.footnote-backlink {
 </blockquote>
 <p>Well, I am not so sure about that although I accept the point that is being made. The Titanic dataset is so ubiquitous in tutorials for data exploration and, later on, for developing an understanding of the principles of machine learning, it seems that for sure, everybody in data science has seen it or at least heard about it, and has probably cut their data analytics teeth on it themselves. Nevertheless, it is such a rich resource for learning that I felt compelled to include it in my blog, as a multipart series. I hope you find it interesting and if you’ve seen it all before, my apologies.</p>
 <h3 id="preamble">Preamble</h3>
-<p>Information drawn from <a href="https://www.kaggle.com/c/titanic/overview">kaggle</a> :</p>
+<p>Information drawn from <a href="https://www.kaggle.com/c/titanic/overview" target="_blank">Kaggle</a> :</p>
 <p>The sinking of the Titanic is one of the most infamous shipwrecks in history.</p>
 <p>On April 15, 1912, during her maiden voyage, the widely considered “unsinkable” RMS Titanic sank after colliding with an iceberg. Unfortunately, there were not enough lifeboats for everyone onboard, resulting in the death of 1502 out of 2224 passengers and crew.</p>
 <p>While there was some element of luck involved in surviving, it seems some groups of people were more likely to survive than others.</p>
 <p>In Kaggle’s Titanic Machine Learning Competition, participants are asked to build a predictive model that answers the question: “what sorts of people were more likely to survive?” using passenger data (i.e., name, age, gender socio-economic class, etc.). Participants gain access to two similar datasets that include the passenger information. One dataset is titled “train.csv” and the other is titled test.csv”. The “train.csv” dataset contains details of a subset of 891 passengers on board and importantly, reveals whether they survived or not, also known as the “ground truth”. The “test.csv” dataset contains similar information but does not disclose the “ground truth” for each passenger. Using the patterns found in the train.csv data, participants seek to predict whether the other subset of 418 passengers on board, found in test.csv, survived.</p>
 <p>In this blog post I do some data exploration of the train.csv dataset.</p>
 <h3 id="to-the-project">To the project…</h3>
+<p>First thing to do is load the data and take a preliminary look at it. Step 1, load the required R packages.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Step 2, load the data.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>There are various functions from various packages that help us get to know the data. The first one I like to use is glimpse().</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>Rows: 891
+Columns: 12
+$ PassengerId &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1…
+$ Survived    &lt;dbl&gt; 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, …
+$ Pclass      &lt;dbl&gt; 3, 1, 3, 1, 3, 3, 1, 3, 3, 2, 3, 1, 3, 3, 3, 2, …
+$ Name        &lt;chr&gt; &quot;Braund, Mr. Owen Harris&quot;, &quot;Cumings, Mrs. John B…
+$ Sex         &lt;chr&gt; &quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;, &quot;m…
+$ Age         &lt;dbl&gt; 22, 38, 26, 35, 35, NA, 54, 2, 27, 14, 4, 58, 20…
+$ SibSp       &lt;dbl&gt; 1, 1, 0, 1, 0, 0, 0, 3, 0, 1, 1, 0, 0, 1, 0, 0, …
+$ Parch       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 1, 0, 0, 5, 0, 0, …
+$ Ticket      &lt;chr&gt; &quot;A/5 21171&quot;, &quot;PC 17599&quot;, &quot;STON/O2. 3101282&quot;, &quot;11…
+$ Fare        &lt;dbl&gt; 7.2500, 71.2833, 7.9250, 53.1000, 8.0500, 8.4583…
+$ Cabin       &lt;chr&gt; NA, &quot;C85&quot;, NA, &quot;C123&quot;, NA, NA, &quot;E46&quot;, NA, NA, NA…
+$ Embarked    &lt;chr&gt; &quot;S&quot;, &quot;C&quot;, &quot;S&quot;, &quot;S&quot;, &quot;S&quot;, &quot;Q&quot;, &quot;S&quot;, &quot;S&quot;, &quot;S&quot;, &quot;C&quot;…</code></pre>
+</div>
+<p>Fortunately, <a href="https://www.kaggle.com/c/titanic/data" target="_blank">Kaggle</a> provides a Data Dictionary to which I have added some extra details.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div id="zldmqbxfqn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#zldmqbxfqn .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#zldmqbxfqn .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#zldmqbxfqn .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#zldmqbxfqn .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#zldmqbxfqn .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#zldmqbxfqn .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#zldmqbxfqn .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#zldmqbxfqn .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zldmqbxfqn .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zldmqbxfqn .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#zldmqbxfqn .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#zldmqbxfqn .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#zldmqbxfqn .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#zldmqbxfqn .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zldmqbxfqn .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zldmqbxfqn .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#zldmqbxfqn .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#zldmqbxfqn .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zldmqbxfqn .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#zldmqbxfqn .gt_left {
+  text-align: left;
+}
+
+#zldmqbxfqn .gt_center {
+  text-align: center;
+}
+
+#zldmqbxfqn .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#zldmqbxfqn .gt_font_normal {
+  font-weight: normal;
+}
+
+#zldmqbxfqn .gt_font_bold {
+  font-weight: bold;
+}
+
+#zldmqbxfqn .gt_font_italic {
+  font-style: italic;
+}
+
+#zldmqbxfqn .gt_super {
+  font-size: 65%;
+}
+
+#zldmqbxfqn .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Variable</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Description</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Details</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">PassengerId</td>
+<td class="gt_row gt_left">Unique ID for purpose of dataset analysis</td>
+<td class="gt_row gt_left">Numeric</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Survived</td>
+<td class="gt_row gt_left gt_striped">Indicates if the passenger survived the sinking or not</td>
+<td class="gt_row gt_left gt_striped">Numeric [0 1] 0 = no 1 = yes</td></tr>
+    <tr><td class="gt_row gt_left">Pclass</td>
+<td class="gt_row gt_left">Passenger ticket class</td>
+<td class="gt_row gt_left">Numeric [1 2 3] 1 = 1st class  2 = 2nd class  3 = 3rd class</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Name</td>
+<td class="gt_row gt_left gt_striped">Passenger name</td>
+<td class="gt_row gt_left gt_striped">Character [string]</td></tr>
+    <tr><td class="gt_row gt_left">Sex</td>
+<td class="gt_row gt_left">Passenger sex</td>
+<td class="gt_row gt_left">Character [female  male]</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Age</td>
+<td class="gt_row gt_left gt_striped">Passenger age</td>
+<td class="gt_row gt_left gt_striped">Numeric [years]</td></tr>
+    <tr><td class="gt_row gt_left">SibSp</td>
+<td class="gt_row gt_left">Indicates the number of siblings and/or a spouse also aboard</td>
+<td class="gt_row gt_left">Numeric [count]</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Parch</td>
+<td class="gt_row gt_left gt_striped">Indicates the number of parents and/or children also aboard</td>
+<td class="gt_row gt_left gt_striped">Numeric [count]</td></tr>
+    <tr><td class="gt_row gt_left">Ticket</td>
+<td class="gt_row gt_left">Ticket number</td>
+<td class="gt_row gt_left">Character [string]</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Fare</td>
+<td class="gt_row gt_left gt_striped">Ticket fare paid</td>
+<td class="gt_row gt_left gt_striped">Numeric [£]</td></tr>
+    <tr><td class="gt_row gt_left">Cabin</td>
+<td class="gt_row gt_left">Cabin number</td>
+<td class="gt_row gt_left">Character [string]</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Embarked</td>
+<td class="gt_row gt_left gt_striped">Port of Embarkation</td>
+<td class="gt_row gt_left gt_striped">Character [C = Cherbourg  Q = Queenstown  S = Southhampton)</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+<p><strong>Notes to the variables</strong> pclass: A proxy for socio_economic status (SES) 1st = Upper 2nd = Middle 3rd = Lower</p>
+<p>age: Age is fractional if less than 1. If the age is estimated, it is in the form of xx.5</p>
+<p>sibsp: The dataset defines family relations in this way… Sibling = brother, sister, stepbrother, stepsister Spouse = husband, wife (mistresses and fiancés were ignored)</p>
+<p>parch: The dataset defines family relations in this way… Parent = mother, father Child = daughter, son, stepdaughter, stepson Some children travelled only with a nanny, therefore parch = 0 for them.</p>
+<p>There are 891 rows (observations) and 12 columns (variables). Variables Survived, Pclass, Sex, and Embarked represent factor levels but are recorded as either numerical or character values. These variables will be converted to factor. We can also see missing values (NA) in the variables Cabin, Age and Embarked. We will need to investigate the extent of the missing data.</p>
+<p>The summary function will help identify how many NAs are in the dataset, at least for the numeric variables, like Age.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>  PassengerId       Survived          Pclass          Name          
+ Min.   :  1.0   Min.   :0.0000   Min.   :1.000   Length:891        
+ 1st Qu.:223.5   1st Qu.:0.0000   1st Qu.:2.000   Class :character  
+ Median :446.0   Median :0.0000   Median :3.000   Mode  :character  
+ Mean   :446.0   Mean   :0.3838   Mean   :2.309                     
+ 3rd Qu.:668.5   3rd Qu.:1.0000   3rd Qu.:3.000                     
+ Max.   :891.0   Max.   :1.0000   Max.   :3.000                     
+                                                                    
+     Sex                 Age            SibSp           Parch       
+ Length:891         Min.   : 0.42   Min.   :0.000   Min.   :0.0000  
+ Class :character   1st Qu.:20.12   1st Qu.:0.000   1st Qu.:0.0000  
+ Mode  :character   Median :28.00   Median :0.000   Median :0.0000  
+                    Mean   :29.70   Mean   :0.523   Mean   :0.3816  
+                    3rd Qu.:38.00   3rd Qu.:1.000   3rd Qu.:0.0000  
+                    Max.   :80.00   Max.   :8.000   Max.   :6.0000  
+                    NA&#39;s   :177                                     
+    Ticket               Fare           Cabin          
+ Length:891         Min.   :  0.00   Length:891        
+ Class :character   1st Qu.:  7.91   Class :character  
+ Mode  :character   Median : 14.45   Mode  :character  
+                    Mean   : 32.20                     
+                    3rd Qu.: 31.00                     
+                    Max.   :512.33                     
+                                                       
+   Embarked        
+ Length:891        
+ Class :character  
+ Mode  :character  
+                   
+                   
+                   
+                   </code></pre>
+</div>
+<p>We can see that 177 rows are missing data for Age. We can find the number of NAs in each column as follows</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>PassengerId    Survived      Pclass        Name         Sex 
+          0           0           0           0           0 
+        Age       SibSp       Parch      Ticket        Fare 
+        177           0           0           0           0 
+      Cabin    Embarked 
+        687           2 </code></pre>
+</div>
+<p>Another alternative is to use the missmap function from the Amelia package.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="titanic-dataset-analysis-part-1_files/figure-html5/missingness_map-1.png" width="624" /></p>
+</div>
+<h3 id="missing-values">Missing Values</h3>
+<p>From what I could learn online, there are basically three ways to handle missing values:</p>
+<p><strong>1. Deleting the observations</strong> Deletion can be performed in two ways: List Wise Deletion and Pair Wise Deletion.</p>
+<ul>
+<li>In list wise deletion, we delete observations where any of the variables are missing. For simplicity we can say that this method delets the whole row of observations in which the dating is missing. Simplicity is one of the major advantages of this method, but this method reduces the power of the model because it reduces the sample size. We can use the following code to see how many cases would be left if we were to use list wise deletion.</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>[1] 183</code></pre>
+</div>
+<p>183 out of 891, or a mere 20.5% of the dataset.</p>
+<ul>
+<li>In pair wise deletion, we perform analysis with all cases in which the variables of interest are present. Advantage of this method is, it keeps as many cases available for analysis. One of the disadvantages of this method, it uses different sample size for different variables.</li>
+</ul>
+<p>Given the small size of the dataset, we probably should not opt for deleting either entire observations (rows) or variables (columns) containing missing values.</p>
+<p><strong>2. Mean/Mode/Median (Sensible Value) Imputation</strong> Imputation is a method to fill in the missing values with estimated ones. The objective is to employ known relationships that can be identified in the valid values of the date set to assist in estimating the missing values. Mean/Mode/Median imputation is one of the most frequently used methods. It consists of replacing the missing data for a given attribute by the mean or median (quantitative attribute) or mode (qualitative attribute) of all known values of that variable. It can be of two types:</p>
+<ul>
+<li>Generalised Imputation: In this case, we calculate the mean or median for all non missing values of that variable then replace missing value with mean or median. For example, the mean of Age is calculated as:</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>[1] 29.69912</code></pre>
+</div>
+<ul>
+<li>Similar Case Imputation: In this case, we calculate average based on particular attributes. For example, in the current case instead of calculating the overall mean for age we could base the calculation on sex, as follows:</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code># A tibble: 2 × 2
+  Sex    mean_age
+  &lt;chr&gt;     &lt;dbl&gt;
+1 female     27.9
+2 male       30.7</code></pre>
+</div>
+<p><strong>3. Prediction</strong> Prediction models are sophisticated methods for handling missing data. Modeling techniques based on regression, ANOVA, logistic regression, k-nearest neighour, random forest algorithms and so on, are used. R has various packages to deal with missing data, such as:</p>
+<ul>
+<li>mice</li>
+<li>Amelia</li>
+<li>missForest</li>
+<li>Hmisc</li>
+<li>mi</li>
+<li>DMwR</li>
+<li>rpart</li>
+</ul>
+<p><strong>Using Sensible Value Imputation on missing data for Embarkation</strong> Lets grab the two observations that are missing the Embarkment values.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code># A tibble: 2 × 12
+  PassengerId Survived Pclass Name      Sex     Age SibSp Parch Ticket
+        &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; 
+1          62        1      1 Icard, M… fema…    38     0     0 113572
+2         830        1      1 Stone, M… fema…    62     0     0 113572
+# … with 3 more variables: Fare &lt;dbl&gt;, Cabin &lt;chr&gt;, Embarked &lt;chr&gt;</code></pre>
+</div>
+<p>Lets have a look at what the average fare was for females travelling first class and embarking from the three different ports:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code># A tibble: 10 × 5
+# Groups:   Embarked [4]
+   Embarked Pclass number mean_fare median_fare
+   &lt;chr&gt;     &lt;dbl&gt;  &lt;int&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+ 1 C             1     43     116.        83.2 
+ 2 C             2      7      25.3       24   
+ 3 C             3     23      14.7       14.5 
+ 4 Q             1      1      90         90   
+ 5 Q             2      2      12.4       12.4 
+ 6 Q             3     33      10.3        7.75
+ 7 S             1     48      99.0       79.6 
+ 8 S             2     67      21.9       23   
+ 9 S             3     88      18.7       14.4 
+10 &lt;NA&gt;          1      2      80         80   </code></pre>
+</div>
+<p>Arunkumar Venkataramanan on Kaggle concluded that they most likely embarked from Cherbourg but unfortunately does not give any details as to why he came to that conclusion. It seems to me, looking at the mean and median for 1st class fares for females in the summary above that it was more likely that they embarked from Southhampton. I replace the missing values accordingly:</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Let’s have another look to see how many NAs are in the columns.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>PassengerId    Survived      Pclass        Name         Sex 
+          0           0           0           0           0 
+        Age       SibSp       Parch      Ticket        Fare 
+        177           0           0           0           0 
+      Cabin    Embarked 
+        687           0 </code></pre>
+</div>
+<p>Ok, 687 for Cabin, and 177 for Age. Cabin is a tough one (for me). I’m going to leave dealing with that variable until a future post where I get the data ready for machine learning. At this stage I just want to do some preliminary exploration on the data so I will, for the time being, see how I can deal with the missing Age values. First up, I will insert two new columns that are copies of the Age column. I want to use two different predictive imputation packages (rpart and mice) to substitute values for the missing Age values and I want the replicated columns so I can compare the original values with the new.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>You can get information about the rpart package <a href="https://cran.r-project.org/web/packages/rpart/rpart.pdf" target="_blank">here.</a></p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+FALSE  TRUE 
+  714   177 </code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+FALSE 
+  891 </code></pre>
+</div>
+<p>You can get information the mice package <a href="https://cran.r-project.org/web/packages/mice/mice.pdf" target="_blank">here.</a></p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+FALSE  TRUE 
+  714   177 </code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+ iter imp variable
+  1   1  age_mice
+  1   2  age_mice
+  1   3  age_mice
+  1   4  age_mice
+  1   5  age_mice
+  2   1  age_mice
+  2   2  age_mice
+  2   3  age_mice
+  2   4  age_mice
+  2   5  age_mice
+  3   1  age_mice
+  3   2  age_mice
+  3   3  age_mice
+  3   4  age_mice
+  3   5  age_mice
+  4   1  age_mice
+  4   2  age_mice
+  4   3  age_mice
+  4   4  age_mice
+  4   5  age_mice
+  5   1  age_mice
+  5   2  age_mice
+  5   3  age_mice
+  5   4  age_mice
+  5   5  age_mice</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+FALSE 
+  891 </code></pre>
+</div>
+<p>Compare the different imputations for age:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code># A tibble: 2 × 7
+  Sex    mean_age sd_age mean_rpart sd_rpart mean_mice sd_mice
+  &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 female     27.9   14.1       27.7     13.3      28      14.3
+2 male       30.7   14.7       30.5     13.5      30.6    14.3</code></pre>
+</div>
+<p>Interesting. I will use age_rpart for the rest of this blog post.</p>
+<p>As previously discussed the variables Survived, Pclass, Sex, and Embarked are better treated as factors:</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Survived Count</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="titanic-dataset-analysis-part-1_files/figure-html5/survived-count-plot-1.png" width="624" /></p>
+</div>
+<p>Survived Count by Sex</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="titanic-dataset-analysis-part-1_files/figure-html5/survived-count-sex-plot-1.png" width="624" /></p>
+</div>
+<p>Survival by Pclass</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="titanic-dataset-analysis-part-1_files/figure-html5/survival-pclass-plot-1.png" width="624" /></p>
+</div>
+<p>Age Density</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="titanic-dataset-analysis-part-1_files/figure-html5/age-density-plot-1.png" width="624" /></p>
+</div>
+<p>Survival by Age</p>
+<p>First cut the age_rpart variable into bins of 10 year spans:</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Then plot:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="titanic-dataset-analysis-part-1_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
 <p>Resources</p>
 <p><a href="https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html" class="uri">https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html</a></p>
 <p><a href="https://www.kaggle.com/c/titanic/overview" class="uri">https://www.kaggle.com/c/titanic/overview</a></p>
 <p><a href="https://medium.com/swlh/basic-exploratory-data-analysis-of-titanic-data-using-r-53d4b764ec89" class="uri">https://medium.com/swlh/basic-exploratory-data-analysis-of-titanic-data-using-r-53d4b764ec89</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><a href="http://r-statistics.co/Missing-Value-Treatment-With-R.html" class="uri">http://r-statistics.co/Missing-Value-Treatment-With-R.html</a></p>
+<p><a href="https://medium.com/coinmonks/dealing-with-missing-data-using-r-3ae428da2d17" class="uri">https://medium.com/coinmonks/dealing-with-missing-data-using-r-3ae428da2d17</a></p>
+<p><a href="https://www.kaggle.com/arunkumarramanan/data-science-in-r-and-titanic-survival-prediction/notebook" class="uri">https://www.kaggle.com/arunkumarramanan/data-science-in-r-and-titanic-survival-prediction/notebook</a></p>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/602920_08b3060ff9544f5e97ae4ed70c95d491.html" class="uri">https://rstudio-pubs-static.s3.amazonaws.com/602920_08b3060ff9544f5e97ae4ed70c95d491.html</a></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">

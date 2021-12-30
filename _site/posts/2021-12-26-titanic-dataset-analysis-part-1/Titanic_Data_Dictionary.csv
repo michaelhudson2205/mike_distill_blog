@@ -1,0 +1,13 @@
+Variable,Description,Details
+PassengerId,Unique ID for purpose of dataset analysis,Numeric
+Survived,Indicates if the passenger survived the sinking or not,Numeric [0 1] 0 = no 1 = yes
+Pclass,Passenger ticket class,Numeric [1 2 3] 1 = 1st class  2 = 2nd class  3 = 3rd class
+Name,Passenger name,Character [string]
+Sex,Passenger sex,Character [female  male]
+Age,Passenger age,Numeric [years]
+SibSp,Indicates the number of siblings and/or a spouse also aboard,Numeric [count]
+Parch,Indicates the number of parents and/or children also aboard,Numeric [count]
+Ticket,Ticket number,Character [string]
+Fare,Ticket fare paid,Numeric [£]
+Cabin,Cabin number,Character [string]
+Embarked,Port of Embarkation,Character [C = Cherbourg  Q = Queenstown  S = Southhampton)

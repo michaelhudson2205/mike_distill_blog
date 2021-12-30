@@ -23,11 +23,14 @@ knitr::include_graphics("titanic_part_1.png")
 
 ### Relevance to Data Analytics Skills
 * Using RMarkdown
-* Data wrangling including dealing with missing values
+    * Formatting tables with gt package
 * Using R code
+* Data wrangling
+    * Dealing with missing values
+    * Imputation
 
 ---
-[KDnuggets](https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html) has this to say about projects ideas **not** to include in a data science portfolio.
+[KDnuggets](https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html){target="_blank"} has this to say about projects ideas **not** to include in a data science portfolio.
 
 > It's suggested not to have common projects in your portfolio. You need to stay away from the most common project ideas when building a portfolio. Try to come up with something that will truly set you apart from the others.
 >
@@ -42,7 +45,7 @@ knitr::include_graphics("titanic_part_1.png")
 Well, I am not so sure about that although I accept the point that is being made. The Titanic dataset is so ubiquitous in tutorials for data exploration and, later on, for developing an understanding of the principles of machine learning, it seems that for sure, everybody in data science has seen it or at least heard about it, and has probably cut their data analytics teeth on it themselves. Nevertheless,  it is such a rich resource for learning that I felt compelled to include it in my blog, as a multipart series. I hope you find it interesting and if you've seen it all before, my apologies.
 
 ### Preamble
-Information drawn from [kaggle](https://www.kaggle.com/c/titanic/overview) :
+Information drawn from [Kaggle](https://www.kaggle.com/c/titanic/overview){target="_blank"} :
 
 The sinking of the Titanic is one of the most infamous shipwrecks in history.
 
@@ -56,6 +59,285 @@ In this blog post I do some data exploration of the train.csv dataset.
 
 ### To the project...
 
+First thing to do is load the data and take a preliminary look at it. Step 1, load the required R packages.
+
+```{r load-packages}
+library(tidyverse)
+library(gt)
+library(Amelia)
+```
+Step 2, load the data.
+
+```{r load-data}
+titanic_train_raw <- read_csv("titanic_data/train.csv")
+```
+There are various functions from various packages that help us get to know the data. The first one I like to use is glimpse().
+
+```{r first-looks}
+glimpse(titanic_train_raw)
+```
+
+Fortunately, [Kaggle](https://www.kaggle.com/c/titanic/data){target="_blank"} provides a Data Dictionary to which I have added some extra details.
+
+```{r data-dictionary}
+tdd <- read_csv("Titanic_Data_Dictionary.csv")
+gt(tdd) %>% opt_row_striping()
+```
+
+**Notes to the variables**
+pclass: A proxy for socio_economic status (SES)
+1st = Upper
+2nd = Middle
+3rd = Lower
+
+age: Age is fractional if less than 1. If the age is estimated, it is in the form of xx.5
+
+sibsp: The dataset defines family relations in this way...
+Sibling = brother, sister, stepbrother, stepsister
+Spouse = husband, wife (mistresses and fiancés were ignored)
+
+parch: The dataset defines family relations in this way...
+Parent = mother, father
+Child = daughter, son, stepdaughter, stepson
+Some children travelled only with a nanny, therefore parch = 0 for them.
+
+There are 891 rows (observations) and 12 columns (variables). Variables Survived, Pclass, Sex, and Embarked represent factor levels but are recorded as either numerical or character values. These variables will be converted to factor. We can also see missing values (NA) in the variables Cabin, Age and Embarked. We will need to investigate the extent of the missing data.
+
+The summary function will help identify how many NAs are in the dataset, at least for the numeric variables, like Age.
+
+```{r}
+summary(titanic_train_raw)
+```
+
+We can see that 177 rows are missing data for Age. We can find the number of NAs in each column as follows
+
+```{r counting-na-raw}
+colSums(is.na(titanic_train_raw))
+```
+
+Another alternative is to use the missmap function from the Amelia package.
+
+```{r missingness_map}
+missmap(titanic_train_raw)
+```
+
+
+### Missing Values
+From what I could learn online, there are basically three ways to handle missing values:
+
+**1. Deleting the observations**
+Deletion can be performed in two ways: List Wise Deletion and Pair Wise Deletion.
+
+- In list wise deletion, we delete observations where any of the variables are missing. For simplicity we can say that this method delets the whole row of observations in which the dating is missing. Simplicity is one of the major advantages of this method, but this method reduces the power of the model because it reduces the sample size. We can use the following code to see how many cases would be left if we were to use list wise deletion.
+
+```{r list-wise-deletion-count}
+sum(complete.cases(titanic_train_raw))
+```
+
+183 out of 891, or a mere 20.5% of the dataset.
+
+- In pair wise deletion, we perform analysis with all cases in which the variables of interest are present. Advantage of this method is, it keeps as many cases available for analysis. One of the disadvantages of this method, it uses different sample size for different variables.
+
+Given the small size of the dataset, we probably should not opt for deleting either entire observations (rows) or variables (columns) containing missing values.
+
+**2. Mean/Mode/Median (Sensible Value) Imputation**
+Imputation is a method to fill in the missing values with estimated ones. The objective is to employ known relationships that can be identified in the valid values of the date set to assist in estimating the missing values. Mean/Mode/Median imputation is one of the most frequently used methods. It consists of replacing the missing data for a given attribute by the mean or median (quantitative attribute) or mode (qualitative attribute) of all known values of that variable. It can be of two types:
+
+- Generalised Imputation: In this case, we calculate the mean or median for all non missing values of that variable then replace missing value with mean or median. For example, the mean of Age is calculated as:
+
+```{r}
+mean(titanic_train_raw$Age, na.rm = TRUE)
+```
+
+- Similar Case Imputation: In this case, we calculate average based on particular attributes. For example, in the current case instead of calculating the overall mean for age we could base the calculation on sex, as follows:
+
+```{r}
+titanic_train_raw %>% group_by(Sex) %>% summarise(mean_age = mean(Age, na.rm = TRUE))
+```
+
+**3. Prediction**
+Prediction models are sophisticated methods for handling missing data. Modeling techniques based on regression, ANOVA, logistic regression, k-nearest neighour, random forest algorithms and so on, are used. R has various packages to deal with missing data, such as:
+
+- mice
+- Amelia
+- missForest
+- Hmisc
+- mi
+- DMwR
+- rpart
+
+**Using Sensible Value Imputation on missing data for Embarkation**
+Lets grab the two observations that are missing the Embarkment values.
+
+```{r}
+titanic_train_raw[which(is.na(titanic_train_raw$Embarked)),]
+```
+
+Lets have a look at what the average fare was for females travelling first class and embarking from the three different ports:
+
+```{r}
+titanic_train_raw %>% 
+  filter(Sex == "female") %>%
+  group_by(Embarked, Pclass) %>%
+  summarise(number = n(), mean_fare = mean(Fare), median_fare = median(Fare))
+```
+
+Arunkumar Venkataramanan on Kaggle concluded that they most likely embarked from Cherbourg but unfortunately does not give any details as to why he came to that conclusion. It seems to me, looking at the mean and median for 1st class fares for females in the summary above that it was more likely that they embarked from Southhampton. I replace the missing values accordingly:
+
+```{r}
+titanic_train_cleaned <- titanic_train_raw
+titanic_train_cleaned$Embarked[c(62, 830)] <- "S"
+```
+
+Let's have another look to see how many NAs are in the columns.
+
+```{r}
+colSums(is.na(titanic_train_cleaned))
+```
+
+Ok, 687 for Cabin, and 177 for Age. Cabin is a tough one (for me). I'm going to leave dealing with that variable until a future post where I get the data ready for machine learning. At this stage I just want to do some preliminary exploration on the data so I will, for the time being, see how I can deal with the missing Age values. First up, I will insert two new columns that are copies of the Age column. I want to use two different predictive imputation packages (rpart and mice) to substitute values for the missing Age values and I want the replicated columns so I can compare the original values with the new.
+
+```{r copy-age}
+titanic_train_cleaned <- titanic_train_cleaned %>% 
+  mutate(age_rpart = Age, age_mice = Age)
+```
+
+You can get information about the rpart package [here.](https://cran.r-project.org/web/packages/rpart/rpart.pdf){target="_blank"}
+
+```{r pre-rpart}
+# show the number of NAs in the age_rpart column
+table(is.na(titanic_train_cleaned$age_rpart))
+```
+
+
+```{r using-rpart}
+# load the rpart package
+library(rpart)
+
+# construct the rpart model
+age_fit <- rpart(age_rpart ~ Pclass + Sex + SibSp + Parch + Fare + Embarked,
+                 data = titanic_train_cleaned[!is.na(titanic_train_cleaned$age_rpart),],
+                 method = "anova")
+
+# replace the NA values with the predicted values from the rpart model
+titanic_train_cleaned$age_rpart[is.na(titanic_train_cleaned$age_rpart)] <- 
+  predict(age_fit, titanic_train_cleaned[is.na(titanic_train_cleaned$age_rpart),])
+```
+
+```{r post-rpart}
+# check that all NAs have been replaced
+table(is.na(titanic_train_cleaned$age_rpart))
+```
+
+
+You can get information the mice package [here.](https://cran.r-project.org/web/packages/mice/mice.pdf){target="_blank"}
+
+```{r pre-mice}
+# show the number of NAs in the age_rpart column
+table(is.na(titanic_train_cleaned$age_mice))
+```
+
+```{r using-mice}
+# load the mice package
+library(mice)
+
+# Set a random seed
+set.seed(129)
+
+# Perform mice imputation, excluding certain less-than-useful variables
+mice_mod <- mice(titanic_train_cleaned[,!names(titanic_train_cleaned) %in%
+                                         c("PassengerId","Survived","Name","Ticket","Cabin","age_rpart","Age")], method = "rf")
+
+mice_output <- complete(mice_mod)
+titanic_train_cleaned$age_mice <- mice_output$age_mice
+```
+
+```{r post-mice}
+# show the number of NAs in the age_rpart column
+table(is.na(titanic_train_cleaned$age_mice))
+```
+
+Compare the different imputations for age:
+
+```{r age-compare}
+titanic_train_cleaned %>% 
+  group_by(Sex) %>% 
+  summarise(
+    mean_age = mean(Age, na.rm = TRUE),
+    sd_age = sd(Age, na.rm = TRUE),
+    mean_rpart = mean(age_rpart),
+    sd_rpart = sd(age_rpart),
+    mean_mice = mean(age_mice),
+    sd_mice = sd(age_mice)
+  )
+```
+
+Interesting. I will use age_rpart for the rest of this blog post.
+
+As previously discussed the variables Survived, Pclass, Sex, and Embarked are better treated as factors:
+
+```{r}
+titanic_train_cleaned$Survived <- as_factor(titanic_train_cleaned$Survived)
+titanic_train_cleaned$Pclass <- as_factor(titanic_train_cleaned$Pclass)
+titanic_train_cleaned$Sex <- as_factor(titanic_train_cleaned$Sex)
+titanic_train_cleaned$Embarked <- as_factor(titanic_train_cleaned$Embarked)
+```
+
+Survived Count
+
+```{r survived-count-plot}
+ggplot(titanic_train_cleaned, aes(x = Survived)) +
+  geom_bar(width = 0.5, fill = "coral") +
+  geom_text(stat = "count", aes(label = stat(count)), vjust = -0.5) +
+  theme_classic()
+```
+
+Survived Count by Sex
+
+```{r survived-count-sex-plot}
+ggplot(titanic_train_cleaned, aes(x = Survived, fill = Sex)) +
+  geom_bar(position = position_dodge()) +
+  geom_text(stat = "count", aes(label = stat(count)),
+            position = position_dodge(width = 1), vjust = -0.5) +
+  theme_classic()
+```
+
+Survival by Pclass
+
+```{r survival-pclass-plot}
+ggplot(titanic_train_cleaned, aes(x = Survived, fill = Pclass)) +
+  geom_bar(position = position_dodge()) +
+  geom_text(stat = "count", aes(label = stat(count)),
+            position = position_dodge(width = 1), vjust = -0.5) +
+  theme_classic()
+```
+
+Age Density
+
+```{r age-density-plot}
+ggplot(titanic_train_cleaned, aes(x = age_rpart)) +
+  geom_density(fill = "coral")
+```
+
+Survival by Age
+
+First cut the age_rpart variable into bins of 10 year spans:
+
+```{r age-cut}
+titanic_train_cleaned$discretized_age <- cut(titanic_train_cleaned$age_rpart,
+                                             c(0,10,20,30,40,50,60,70,80,90))
+```
+
+Then plot:
+
+```{r}
+ggplot(titanic_train_cleaned, aes(x = discretized_age, fill = Survived)) +
+  geom_bar(position = position_dodge()) +
+  geom_text(stat = "count", aes(label = stat(count)),
+            position = position_dodge(width = 1), vjust = -0.5) +
+  theme_classic()
+```
+
 
 Resources
 
@@ -64,3 +346,11 @@ https://www.kdnuggets.com/2021/10/data-science-portfolio-project-ideas.html
 https://www.kaggle.com/c/titanic/overview
 
 https://medium.com/swlh/basic-exploratory-data-analysis-of-titanic-data-using-r-53d4b764ec89
+
+http://r-statistics.co/Missing-Value-Treatment-With-R.html
+
+https://medium.com/coinmonks/dealing-with-missing-data-using-r-3ae428da2d17
+
+https://www.kaggle.com/arunkumarramanan/data-science-in-r-and-titanic-survival-prediction/notebook
+
+https://rstudio-pubs-static.s3.amazonaws.com/602920_08b3060ff9544f5e97ae4ed70c95d491.html
