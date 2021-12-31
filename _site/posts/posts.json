@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-12-31-mixed-bag-of-statistical-inference/",
+    "title": "Mixed Bag of Statistical Inference",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://mike-distill-blog.netlify.app/"
+      }
+    ],
+    "date": "2021-12-31",
+    "categories": [],
+    "contents": "\n\n\n\n\n\n\n",
+    "preview": "posts/2021-12-31-mixed-bag-of-statistical-inference/MixedBag_stat_infer_1200x800.jpg",
+    "last_modified": "2021-12-31T18:32:27+11:00",
+    "input_file": "mixed-bag-of-statistical-inference.knit.md"
+  },
+  {
     "path": "posts/2021-12-26-titanic-dataset-analysis-part-1/",
     "title": "Titanic Dataset Analysis - Part 1",
     "description": "These common projects can hurt you...",
