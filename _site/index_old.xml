@@ -12,7 +12,14 @@
       <title>Mixed Bag of Statistical Inference</title>
       <dc:creator>Mike Hudson</dc:creator>
       <link>https://mike-distill-blog.netlify.app/posts/2021-12-31-mixed-bag-of-statistical-inference</link>
-      <description>A short description of the post.</description>
+      <description>Solved problems with R using statistical inference.</description>
+      <category>statistical inference</category>
+      <category>t-tests</category>
+      <category>one-way anova</category>
+      <category>chi-square</category>
+      <category>correlation</category>
+      <category>regression</category>
+      <category>reporting results</category>
       <guid>https://mike-distill-blog.netlify.app/posts/2021-12-31-mixed-bag-of-statistical-inference</guid>
       <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mike-distill-blog.netlify.app/posts/2021-12-31-mixed-bag-of-statistical-inference/MixedBag_stat_infer_1200x800.jpg" medium="image" type="image/jpeg"/>

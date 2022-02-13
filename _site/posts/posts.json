@@ -2,7 +2,7 @@
   {
     "path": "posts/2021-12-31-mixed-bag-of-statistical-inference/",
     "title": "Mixed Bag of Statistical Inference",
-    "description": "A short description of the post.",
+    "description": "Solved problems with R using statistical inference.",
     "author": [
       {
         "name": "Mike Hudson",
@@ -10,10 +10,18 @@
       }
     ],
     "date": "2021-12-31",
-    "categories": [],
-    "contents": "\n\n\n\n\n\n\n",
+    "categories": [
+      "statistical inference",
+      "t-tests",
+      "one-way anova",
+      "chi-square",
+      "correlation",
+      "regression",
+      "reporting results"
+    ],
+    "contents": "\n\n\n\nRelevance to Data Analytics Skills\nKnowledge of statistical inference\nAbility to apply relevant statistical applications to solve problems\nDemonstrated skill in reporting results\nTo the project…\nI wish to show how various problems are solved with R using statistical inference.\nOne Sample t-test The one sample t-test checks to see if there is a difference between one quantitative variable that you collect from your sample, and a standard or recommended value. A one-sample t-test uses data on a single variable in a sample to compare with a specific hypothesized value, whicg is usually based on theory, logic, and/or existing research. A two-tailed single-sample t-test assesses whether the sample mean is significantly different from the comparison value specified while a one-tailed test proposes a specific direction for the hypothesized relationship.\nSome examples of research questions where you might use the one sample t-test include:\nYou are growing tomatoes from seeds. On the back of the seed packet, it says that from the time you plant each seed, it should take 62 days until your first tomato is ready. Out of the 12 seeds you planted, the average time-to-tomato was 65 days. Did it take your plants longer to mature?\nReferences\nGillespie, B.J., Hibbert, K.C., & Wagner III, W.E. 2021 A Guide to R for Social and Behavioral Science Statistics, SAGE.\nRadziwill, N.M. 2019 Statistics (The Easier Way) With R 3ed, Lapis Lucera.\n\n\n\n",
     "preview": "posts/2021-12-31-mixed-bag-of-statistical-inference/MixedBag_stat_infer_1200x800.jpg",
-    "last_modified": "2021-12-31T18:32:28+11:00",
+    "last_modified": "2022-02-13T20:52:30+11:00",
     "input_file": {}
   },
   {
