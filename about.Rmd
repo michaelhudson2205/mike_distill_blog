@@ -14,15 +14,17 @@ Yury Zablotski for [this video](https://www.youtube.com/watch?v=WZt4H-ogH3s) on 
 explaining how to create a blog using the distill package
 and Assoc Prof Alison Hill for [this blog post](https://www.apreshill.com/blog/2020-12-postcards-distill/)
 showing how to integrate postcards with distill.
-My main online resource for learning R is [DataCamp](https://www.datacamp.com/), although recently I have been spending most of my "R time" watching the [Statistics Globe](https://www.youtube.com/channel/UCyHEww8_SCdxZvEnkCfi55w) channel on YouTube.
-I also do courses on Linkedin Learning and at the moment I am watching
-*Python for Data Science Essential Training Part 1* by Lillian Pierson. I am a big fan of
-Brandon Foltz [on YouTube](https://www.youtube.com/channel/UCFrjdcImgcQVyFbK04MBEhA) who
-is great at explaining statistical concepts step-by-step.
+My main online resource for learning R is [DataCamp](https://www.datacamp.com/), although recently I have been spending most of my "R time" on YouTube either watching the [Statistics Globe](https://www.youtube.com/channel/UCyHEww8_SCdxZvEnkCfi55w) channel or
+[R Programming 101](https://www.youtube.com/c/RProgramming101).
+I am a big fan of Brandon Foltz [on YouTube](https://www.youtube.com/channel/UCFrjdcImgcQVyFbK04MBEhA) who is great at explaining statistical concepts step-by-step.
 
 The easiest way to contact me is probably via [Twitter](https://twitter.com/mikejhudson).
 My Twitter handle is @mikejhudson.
 
 I hope you find these posts interesting. If you'd like to, you can buy me a coffee.
 
-This page last updated: 2022-02-06
+Here are my Uni results so far:
+
+![Bachelor of Data Analytics](images/unisa_course_2022-09-15.png)
+
+This page last updated: 2022-09-15
