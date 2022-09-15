@@ -1,6 +1,6 @@
 ---
 title: "Mike Hudson"
-image: "Mike_Selfie_800x800.png"
+image: "Mike_Selfie_220915_800x800.png"
 favicon: images/my_logo_405x405.png
 links:
   - label: LinkedIn
@@ -18,12 +18,12 @@ site: distill::distill_website
  
 Hello and welcome to my blog.
 
-I am a self-directed learner of R, Python, Tableau and SQL, living in the Shoalhaven Area of NSW. 
-My interests include statistics, chess, linear algebra and machine learning.
+I am an enthusiastic learner and user of R, Power BI and Excel, living in the Western Plains Area of NSW. 
+My interests include Japanese, chess, mathematics and reading.
 
 - Bachelor of Business Studies at Charles Sturt University (Completed 2021)
-- Bachelor of Data Analytics at University of South Australia (Commencing 2022)
+- Bachelor of Data Analytics at University of South Australia (Commenced 2022)
 
 
 
-*This page last updated: 2022-02-06*
+*This page last updated: 2022-09-15*
