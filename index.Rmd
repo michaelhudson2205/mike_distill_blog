@@ -1,6 +1,6 @@
 ---
 title: "Mike Hudson"
-image: "Mike_Selfie_220915_800x800.png"
+image: "Mike_Selfie_220915_800x800.jpg"
 favicon: images/my_logo_405x405.png
 links:
   - label: LinkedIn
