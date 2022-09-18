@@ -5,22 +5,22 @@
       "title": "About this blog",
       "description": "Just sharing some small projects and other stuff I've been doing.",
       "author": [],
-      "contents": "\nI love learning and using R and RStudio to wrangle, analyse, model, and visualise data.\nIn fact, this website was created using the distill package in R. RStudio has all the tools\nI need to create RMarkdown files and push them through to GitHub. I am indebted to\nYury Zablotski for this video on YouTube,\nexplaining how to create a blog using the distill package\nand Assoc Prof Alison Hill for this blog post\nshowing how to integrate postcards with distill.\nMy main online resource for learning R is DataCamp, although recently I have been spending most of my “R time” on YouTube either watching the Statistics Globe channel or\nR Programming 101.\nI am a big fan of Brandon Foltz on YouTube who is great at explaining statistical concepts step-by-step.\nThe easiest way to contact me is probably via Twitter.\nMy Twitter handle is @mikejhudson.\nI hope you find these posts interesting. If you’d like to, you can buy me a coffee.\nHere are my Uni results so far:\nBachelor of Data AnalyticsThis page last updated: 2022-09-15\n\n\n\n",
-      "last_modified": "2022-09-15T22:48:08+10:00"
+      "contents": "\nI love learning and using R and RStudio to wrangle, analyse, model, and visualise data.\nIn fact, this website was created using the distill package in R. RStudio has all the tools\nI need to create RMarkdown files and push them through to GitHub. I am indebted to\nYury Zablotski for this video on YouTube,\nexplaining how to create a blog using the distill package\nand Assoc Prof Alison Hill for this blog post\nshowing how to integrate postcards with distill.\nMy main online resource for learning R is DataCamp, although recently I have been spending most of my “R time” on YouTube either watching the Statistics Globe channel or\nR Programming 101.\nI am a big fan of Brandon Foltz on YouTube who is great at explaining statistical concepts step-by-step.\nThe easiest way to contact me is probably via Twitter.\nMy Twitter handle is @mikejhudson.\nI hope you find these posts interesting. If you’d like to, you can buy me a coffee.\nThis page last updated: 2022-09-15\n\n\n\n",
+      "last_modified": "2022-09-18T22:19:05+10:00"
     },
     {
       "path": "blog.html",
       "title": "Blog by Mike",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-02-13T20:52:37+11:00"
+      "last_modified": "2022-09-18T22:17:48+10:00"
     },
     {
       "path": "index_old.html",
       "title": "Blog by Mike",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-02-13T20:52:37+11:00"
+      "last_modified": "2022-09-18T22:17:48+10:00"
     },
     {
       "path": "index.html",

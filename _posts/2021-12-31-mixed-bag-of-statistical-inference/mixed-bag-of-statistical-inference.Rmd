@@ -38,7 +38,7 @@ knitr::include_graphics("MixedBag_stat_infer_1200x800.jpg")
 I wish to show how various problems are solved with R using statistical inference.
 
 **One Sample t-test**
-The one sample t-test checks to see if there is a *difference* between one quantitative variable that you collect from your sample, and a *standard* or *recommended value*. A one-sample t-test uses data on a single variable in a sample to compare with a specific hypothesized value, whicg is usually based on theory, logic, and/or existing research. A two-tailed single-sample t-test assesses whether the sample mean is significantly different from the comparison value specified while a one-tailed test proposes a specific direction for the hypothesized relationship.
+The one sample t-test checks to see if there is a *difference* between one quantitative variable that you collect from your sample, and a *standard* or *recommended value*. A one-sample t-test uses data on a single variable in a sample to compare with a specific hypothesized value, which is usually based on theory, logic, and/or existing research. A two-tailed single-sample t-test assesses whether the sample mean is significantly different from the comparison value specified while a one-tailed test proposes a specific direction for the hypothesized relationship.
 
 Some examples of research questions where you might use the one sample t-test include:
 

@@ -23,8 +23,4 @@ My Twitter handle is @mikejhudson.
 
 I hope you find these posts interesting. If you'd like to, you can buy me a coffee.
 
-Here are my Uni results so far:
-
-![Bachelor of Data Analytics](images/unisa_course_2022-09-15.png)
-
 This page last updated: 2022-09-15

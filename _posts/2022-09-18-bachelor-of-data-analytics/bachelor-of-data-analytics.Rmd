@@ -1,0 +1,41 @@
+---
+title: "Bachelor of Data Analytics"
+description: |
+  Currently studying at University of South Australia.
+author:
+  - name: Mike Hudson
+    url: https://mike-distill-blog.netlify.app/
+date: 2021-09-18
+categories:
+  - data analytics
+  - university
+  - education
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r map-image}
+knitr::include_graphics("unisa_course_2022-09-15.png")
+```
+
+### Relevance to Data Analytics Skills
+* Demonstrated pursuit and application of knowledge and skills.
+
+---
+### To the project...
+I commenced studying data analytics at the beginning of 2022. My results thus far are:
+
+| Subject                                               | Result             |
+|-------------------------------------------------------|--------------------|
+| COMP 1043 - Problem Solving and Programming           | High Distinction   |
+| INFT 1024 - Information Technology Fundamentals       | High Distinction   |
+| MATH 1080 - Mathematical Methods for Data Analytics 1 | High Distinction   |
+| MATH 1081 - Mathematical Methods for Data Analytics 2 | Not yet released   |
+| INFT 1032 - Data Driven Web Technologies              | Currently studying |
+
