@@ -5,7 +5,7 @@ description: |
 author:
   - name: Mike Hudson
     url: https://mike-distill-blog.netlify.app/
-date: 2021-09-18
+date: 2022-09-18
 categories:
   - data analytics
   - university

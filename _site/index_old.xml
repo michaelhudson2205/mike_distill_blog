@@ -7,7 +7,19 @@
     <description>Blog by Mike
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 30 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Bachelor of Data Analytics</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2022-09-18-bachelor-of-data-analytics</link>
+      <description>Currently studying at University of South Australia.</description>
+      <category>data analytics</category>
+      <category>university</category>
+      <category>education</category>
+      <guid>https://mike-distill-blog.netlify.app/posts/2022-09-18-bachelor-of-data-analytics</guid>
+      <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://mike-distill-blog.netlify.app/posts/2022-09-18-bachelor-of-data-analytics/unisa_course_2022-09-15.png" medium="image" type="image/png" width="2638" height="1082"/>
+    </item>
     <item>
       <title>Mixed Bag of Statistical Inference</title>
       <dc:creator>Mike Hudson</dc:creator>
@@ -21,7 +33,7 @@
       <category>regression</category>
       <category>reporting results</category>
       <guid>https://mike-distill-blog.netlify.app/posts/2021-12-31-mixed-bag-of-statistical-inference</guid>
-      <pubDate>Thu, 30 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Titanic Dataset Analysis - Part 1</title>
@@ -66,18 +78,6 @@
       <guid>https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names</guid>
       <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mike-distill-blog.netlify.app/posts/2021-11-25-top-100-baby-names/top-100-baby-names.png" medium="image" type="image/png" width="1528" height="736"/>
-    </item>
-    <item>
-      <title>Bachelor of Data Analytics</title>
-      <dc:creator>Mike Hudson</dc:creator>
-      <link>https://mike-distill-blog.netlify.app/posts/2022-09-18-bachelor-of-data-analytics</link>
-      <description>Currently studying at University of South Australia.</description>
-      <category>data analytics</category>
-      <category>university</category>
-      <category>education</category>
-      <guid>https://mike-distill-blog.netlify.app/posts/2022-09-18-bachelor-of-data-analytics</guid>
-      <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mike-distill-blog.netlify.app/posts/2022-09-18-bachelor-of-data-analytics/unisa_course_2022-09-15.png" medium="image" type="image/png" width="2638" height="1082"/>
     </item>
   </channel>
 </rss>

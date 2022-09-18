@@ -1,5 +1,28 @@
 [
   {
+    "path": "posts/2022-09-18-bachelor-of-data-analytics/",
+    "title": "Bachelor of Data Analytics",
+    "description": "Currently studying at University of South Australia.",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://mike-distill-blog.netlify.app/"
+      }
+    ],
+    "date": "2022-09-18",
+    "categories": [
+      "data analytics",
+      "university",
+      "education"
+    ],
+    "contents": "\n\n\n\nRelevance to Data Analytics Skills\nDemonstrated pursuit and application of knowledge and skills.\nTo the project…\nI commenced studying data analytics at the beginning of 2022. My results thus far are:\nSubject\nResult\nCOMP 1043 - Problem Solving and Programming\nHigh Distinction\nINFT 1024 - Information Technology Fundamentals\nHigh Distinction\nMATH 1080 - Mathematical Methods for Data Analytics 1\nHigh Distinction\nMATH 1081 - Mathematical Methods for Data Analytics 2\nNot yet released\nINFT 1032 - Data Driven Web Technologies\nCurrently studying\n\n\n\n",
+    "preview": "posts/2022-09-18-bachelor-of-data-analytics/unisa_course_2022-09-15.png",
+    "last_modified": "2022-09-18T22:23:58+10:00",
+    "input_file": "bachelor-of-data-analytics.knit.md",
+    "preview_width": 2638,
+    "preview_height": 1082
+  },
+  {
     "path": "posts/2021-12-31-mixed-bag-of-statistical-inference/",
     "title": "Mixed Bag of Statistical Inference",
     "description": "Solved problems with R using statistical inference.",
@@ -106,28 +129,5 @@
     "input_file": {},
     "preview_width": 1528,
     "preview_height": 736
-  },
-  {
-    "path": "posts/2022-09-18-bachelor-of-data-analytics/",
-    "title": "Bachelor of Data Analytics",
-    "description": "Currently studying at University of South Australia.",
-    "author": [
-      {
-        "name": "Mike Hudson",
-        "url": "https://mike-distill-blog.netlify.app/"
-      }
-    ],
-    "date": "2021-09-18",
-    "categories": [
-      "data analytics",
-      "university",
-      "education"
-    ],
-    "contents": "\n\n\n\nRelevance to Data Analytics Skills\nDemonstrated pursuit and application of knowledge and skills.\nTo the project…\nI commenced studying data analytics at the beginning of 2022. My results thus far are:\nSubject\nResult\nCOMP 1043 - Problem Solving and Programming\nHigh Distinction\nINFT 1024 - Information Technology Fundamentals\nHigh Distinction\nMATH 1080 - Mathematical Methods for Data Analytics 1\nHigh Distinction\nMATH 1081 - Mathematical Methods for Data Analytics 2\nNot yet released\nINFT 1032 - Data Driven Web Technologies\nCurrently studying\n\n\n\n",
-    "preview": "posts/2022-09-18-bachelor-of-data-analytics/unisa_course_2022-09-15.png",
-    "last_modified": "2022-09-18T22:17:48+10:00",
-    "input_file": {},
-    "preview_width": 2638,
-    "preview_height": 1082
   }
 ]
