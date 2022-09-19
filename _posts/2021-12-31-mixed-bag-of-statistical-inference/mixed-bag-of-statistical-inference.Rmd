@@ -25,7 +25,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r map-image}
-knitr::include_graphics("MixedBag_stat_infer_1200x800.jpg")
+knitr::include_graphics("Blog_Test.png")
 ```
 
 ### Relevance to Data Analytics Skills
