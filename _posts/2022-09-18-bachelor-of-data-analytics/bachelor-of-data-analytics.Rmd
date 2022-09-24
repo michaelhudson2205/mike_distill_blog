@@ -5,7 +5,7 @@ description: |
 author:
   - name: Mike Hudson
     url: https://mike-distill-blog.netlify.app/
-date: 2022-09-18
+date: 2022-09-24
 categories:
   - data analytics
   - university
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r map-image}
-knitr::include_graphics("unisa_course_2022-09-15.png")
+knitr::include_graphics("unisa_course_2022-09-24.png")
 ```
 
 ### Relevance to Data Analytics Skills
@@ -36,6 +36,6 @@ I commenced studying data analytics at the beginning of 2022. My results thus fa
 | COMP 1043 - Problem Solving and Programming           | High Distinction   |
 | INFT 1024 - Information Technology Fundamentals       | High Distinction   |
 | MATH 1080 - Mathematical Methods for Data Analytics 1 | High Distinction   |
-| MATH 1081 - Mathematical Methods for Data Analytics 2 | Not yet released   |
+| MATH 1081 - Mathematical Methods for Data Analytics 2 | High Distinction   |
 | INFT 1032 - Data Driven Web Technologies              | Currently studying |
 
