@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r map-image}
-knitr::include_graphics("unisa_course_2022-09-24.png")
+knitr::include_graphics("unisa_course_2022-12-18.jpg")
 ```
 
 ### Relevance to Data Analytics Skills
@@ -63,3 +63,4 @@ I commenced studying data analytics at the beginning of 2022. My results thus fa
 | INFS 3088 |                                           |                    |
 | INFT 3039 |                                           |                    |
 
+*This page last updated: 2022-12-18*
