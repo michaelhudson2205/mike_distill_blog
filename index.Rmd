@@ -18,12 +18,12 @@ site: distill::distill_website
  
 Hello and welcome to my blog.
 
-I am an enthusiastic learner and user of R, Power BI and Excel, living in the Western Plains of NSW. 
-My interests include Japanese, chess, mathematics and reading.
+I am an enthusiastic learner and user of R, Python, Power BI and Excel, living in the Western Plains of NSW. 
+My interests include Japanese, chess, mathematics, reading and watching movies from the 1950s & 60s, particularly Japanese and Italian films.
 
 - Bachelor of Business Studies at Charles Sturt University (Completed 2021)
 - Bachelor of Data Analytics at University of South Australia (Commenced 2022)
 
 
 
-*This page last updated: 2022-09-24*
+*This page last updated: 2022-12-18*
