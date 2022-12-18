@@ -7,7 +7,7 @@
     <description>Blog by Mike
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Sep 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Bachelor of Data Analytics</title>
       <dc:creator>Mike Hudson</dc:creator>
@@ -17,7 +17,8 @@
       <category>university</category>
       <category>education</category>
       <guid>https://mike-distill-blog.netlify.app/posts/2022-09-18-bachelor-of-data-analytics</guid>
-      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 24 Sep 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://mike-distill-blog.netlify.app/posts/2022-09-18-bachelor-of-data-analytics/unisa_course_2022-12-18.png" medium="image" type="image/png" width="1200" height="800"/>
     </item>
     <item>
       <title>Mixed Bag of Statistical Inference</title>
