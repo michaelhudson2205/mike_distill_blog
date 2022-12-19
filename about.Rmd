@@ -18,7 +18,7 @@ My main online resource for learning R is [DataCamp](https://www.datacamp.com/),
 [R Programming 101](https://www.youtube.com/c/RProgramming101).
 I am a big fan of Brandon Foltz [on YouTube](https://www.youtube.com/channel/UCFrjdcImgcQVyFbK04MBEhA) who is great at explaining statistical concepts step-by-step.
 
-Lately, I have been getting right into Power BI and I am planning to gain my PL-300 Certification (Microsoft Power BI Data Analyst) in 2023.
+In my work I use Power BI and I am planning to gain my PL-300 Certification (Microsoft Power BI Data Analyst) in 2023.
 
 The easiest way to contact me is probably via [Twitter](https://twitter.com/mikejhudson).
 My Twitter handle is @mikejhudson.

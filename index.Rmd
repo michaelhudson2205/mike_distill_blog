@@ -18,12 +18,13 @@ site: distill::distill_website
  
 Hello and welcome to my blog.
 
-I am an enthusiastic learner and user of R, Python, Power BI and Excel, living in the Western Plains of NSW. 
-My interests include Japanese, chess, mathematics, reading and watching movies from the 1950s & 60s, particularly Japanese and Italian films.
+I am an enthusiastic learner and user of R, Python, Power BI and Excel, living in the Western Plains of NSW. Currently, my spare time is taken up learning about time series analysis and forecasting using R, and I am also teaching myself to use Streamlit, an open source app framework in the Python language.
+
+My personal interests include Japanese, chess, mathematics, reading and watching movies from the 1950s. 
 
 - Bachelor of Business Studies at Charles Sturt University (Completed 2021)
 - Bachelor of Data Analytics at University of South Australia (Commenced 2022)
 
 
 
-*This page last updated: 2022-12-18*
+*This page last updated: 2022-12-19*
