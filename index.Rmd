@@ -1,6 +1,6 @@
 ---
 title: "Mike Hudson"
-image: "Mike_Selfie_220915_800x800.jpg"
+image: "Mike_Selfie_221216_800x800.png"
 favicon: images/my_logo_405x405.png
 links:
   - label: LinkedIn
@@ -18,7 +18,7 @@ site: distill::distill_website
  
 Hello and welcome to my blog.
 
-I am an enthusiastic learner and user of R, Python, Power BI and Excel, living in the Western Plains of NSW. 
+I am an enthusiastic user of R and Excel, and learner of Python and Power BI, living in the Western Plains of NSW. 
 
 <!-- Currently, my spare time is taken up learning about time series analysis and forecasting using R, and I am also teaching myself to use Streamlit, an open source app framework in the Python language. -->
 
@@ -29,4 +29,4 @@ I am an enthusiastic learner and user of R, Python, Power BI and Excel, living i
 
 
 
-*This page last updated: 2022-12-19*
+*This page last updated: 2022-12-28*
