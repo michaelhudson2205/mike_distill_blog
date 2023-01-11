@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2023-01-11-time-series-forcasting-part-1/",
+    "title": "Time Series Forcasting Part 1",
+    "description": "An exploration of time series analysis and various forecasting methods.",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://mike-distill-blog.netlify.app/"
+      }
+    ],
+    "date": "2023-01-11",
+    "categories": [
+      "time series",
+      "forecasting"
+    ],
+    "contents": "\r\n\r\n\r\n\r\nWhat is time series analysis?\r\n\r\n\r\n\r\n",
+    "preview": "posts/2023-01-11-time-series-forcasting-part-1/Time_Series_1.png",
+    "last_modified": "2023-01-11T22:28:53+11:00",
+    "input_file": "time-series-forcasting-part-1.knit.md",
+    "preview_width": 3264,
+    "preview_height": 2448
+  },
+  {
     "path": "posts/2022-09-18-bachelor-of-data-analytics/",
     "title": "Bachelor of Data Analytics",
     "description": "Currently studying at University of South Australia.",
