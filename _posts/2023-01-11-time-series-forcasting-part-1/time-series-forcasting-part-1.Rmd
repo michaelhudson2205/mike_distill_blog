@@ -19,8 +19,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r map-image}
-knitr::include_graphics("Time_Series_1.png")
+```{r time_image}
+knitr::include_graphics("TimeSeries1.jpg")
 ```
 
 ### What is time series analysis?

@@ -15,11 +15,9 @@
       "forecasting"
     ],
     "contents": "\r\n\r\n\r\n\r\nWhat is time series analysis?\r\n\r\n\r\n\r\n",
-    "preview": "posts/2023-01-11-time-series-forcasting-part-1/Time_Series_1.png",
-    "last_modified": "2023-01-11T22:28:53+11:00",
-    "input_file": "time-series-forcasting-part-1.knit.md",
-    "preview_width": 3264,
-    "preview_height": 2448
+    "preview": {},
+    "last_modified": "2023-01-11T23:28:29+11:00",
+    "input_file": "time-series-forcasting-part-1.knit.md"
   },
   {
     "path": "posts/2022-09-18-bachelor-of-data-analytics/",

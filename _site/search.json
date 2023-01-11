@@ -12,8 +12,8 @@
       "path": "blog.html",
       "title": "Blog by Mike",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2022-12-18T15:42:30+11:00"
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2023-01-11T22:56:53+11:00"
     },
     {
       "path": "index.html",
@@ -27,7 +27,7 @@
       "title": "Blog by Mike",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-12-18T15:42:17+11:00"
+      "last_modified": "2023-01-11T22:55:04+11:00"
     }
   ],
   "collections": ["posts/posts.json"]
