@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2023-01-12-time-series-forecasting-part-1/",
+    "title": "TS Forecasting Part 1",
+    "description": "Exploring time series analysis and previewing various forecasting methods.",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://mike-distill-blog.netlify.app/"
+      }
+    ],
+    "date": "2023-01-12",
+    "categories": [
+      "time series",
+      "forecasting"
+    ],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": "posts/2023-01-12-time-series-forecasting-part-1/time_series_1.jpg",
+    "last_modified": "2023-01-12T21:04:44+11:00",
+    "input_file": "time-series-forecasting-part-1.knit.md"
+  },
+  {
     "path": "posts/2022-09-18-bachelor-of-data-analytics/",
     "title": "Bachelor of Data Analytics",
     "description": "Currently studying at University of South Australia.",

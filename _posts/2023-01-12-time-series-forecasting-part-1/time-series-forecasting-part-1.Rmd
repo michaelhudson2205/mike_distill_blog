@@ -1,0 +1,27 @@
+---
+title: "TS Forecasting Part 1"
+description: |
+  Exploring time series analysis and previewing various forecasting methods.
+preview: time_series_1.jpg
+author:
+  - name: Mike Hudson
+    url: https://mike-distill-blog.netlify.app/
+date: 2023-01-12
+categories:
+  - time series
+  - forecasting
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
