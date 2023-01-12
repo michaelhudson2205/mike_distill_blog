@@ -20,8 +20,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Time series analysis is the "art" of extracting meaningful insights from time series data by exploring the series' structure and characteristics and identifying patterns that can then be utilised to forecast future events of the series.(1)
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+References
 
-
+1. Krispin, Rami. 2019 Hands-On Time Series Analysis with R, Packt.

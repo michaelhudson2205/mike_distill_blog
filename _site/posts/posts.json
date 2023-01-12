@@ -14,9 +14,9 @@
       "time series",
       "forecasting"
     ],
-    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "contents": "\r\nTime series analysis is the “art” of extracting meaningful insights from time series data by exploring the series’ structure and characteristics and identifying patterns that can then be utilised to forecast future events of the series.(1)\r\nReferences\r\nKrispin, Rami. 2019 Hands-On Time Series Analysis with R, Packt.\r\n\r\n\r\n\r\n",
     "preview": "posts/2023-01-12-time-series-forecasting-part-1/time_series_1.jpg",
-    "last_modified": "2023-01-12T21:04:44+11:00",
+    "last_modified": "2023-01-12T21:25:04+11:00",
     "input_file": "time-series-forecasting-part-1.knit.md"
   },
   {
