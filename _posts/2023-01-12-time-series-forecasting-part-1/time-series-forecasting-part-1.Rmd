@@ -20,8 +20,10 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Time series analysis is the "art" of extracting meaningful insights from time series data by exploring the series' structure and characteristics and identifying patterns that can then be utilised to forecast future events of the series.(1)
+Time series analysis is the "art" of extracting meaningful insights from time series data by exploring the series' structure and characteristics and identifying patterns that can then be utilised to forecast future events of the series.(2)
 
 References
 
-1. Krispin, Rami. 2019 Hands-On Time Series Analysis with R, Packt.
+1. Kolassa, S. & Siemsen, E. 2016 *Demand Forecasting for Managers*, Business Expert Press
+
+2. Krispin, Rami. 2019 *Hands-On Time Series Analysis with R*, Packt.

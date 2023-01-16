@@ -1,5 +1,24 @@
 [
   {
+    "path": "posts/2023-01-15-basics-of-linear-regression/",
+    "title": "Basics of Linear Regression",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Mike Hudson",
+        "url": "https://mike-distill-blog.netlify.app/"
+      }
+    ],
+    "date": "2023-01-15",
+    "categories": [
+      "linear regression"
+    ],
+    "contents": "\r\nBased on Udemy tutorial by Professor Charles Redmond, Mercyhurst University.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2023-01-15T15:54:15+11:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2023-01-12-time-series-forecasting-part-1/",
     "title": "TS Forecasting Part 1",
     "description": "Exploring time series analysis and previewing various forecasting methods.",
@@ -14,9 +33,9 @@
       "time series",
       "forecasting"
     ],
-    "contents": "\r\nTime series analysis is the “art” of extracting meaningful insights from time series data by exploring the series’ structure and characteristics and identifying patterns that can then be utilised to forecast future events of the series.(1)\r\nReferences\r\nKrispin, Rami. 2019 Hands-On Time Series Analysis with R, Packt.\r\n\r\n\r\n\r\n",
+    "contents": "\r\nTime series analysis is the “art” of extracting meaningful insights from time series data by exploring the series’ structure and characteristics and identifying patterns that can then be utilised to forecast future events of the series.(2)\r\nReferences\r\nKolassa, S. & Siemsen, E. 2016 Demand Forecasting for Managers, Business Expert Press\r\nKrispin, Rami. 2019 Hands-On Time Series Analysis with R, Packt.\r\n\r\n\r\n\r\n",
     "preview": "posts/2023-01-12-time-series-forecasting-part-1/time_series_1.jpg",
-    "last_modified": "2023-01-12T21:25:04+11:00",
+    "last_modified": "2023-01-16T21:36:46+11:00",
     "input_file": "time-series-forecasting-part-1.knit.md"
   },
   {
@@ -38,7 +57,7 @@
     "contents": "\r\n\r\n\r\n\r\nRelevance to Data Analytics Skills\r\nDemonstrated pursuit and application of knowledge and skills.\r\nTo the project…\r\nI commenced studying data analytics at the beginning of 2022. My results thus far are:\r\nSubject\r\n\r\nResult\r\n2022\r\n\r\n\r\nCOMP 1043\r\nProblem Solving and Programming\r\nHigh Distinction\r\nINFT 1024\r\nInformation Technology Fundamentals\r\nHigh Distinction\r\nMATH 1080\r\nMathematical Methods for Data Analytics 1\r\nHigh Distinction\r\nMATH 1081\r\nMathematical Methods for Data Analytics 2\r\nHigh Distinction\r\nINFT 1032\r\nData Driven Web Technologies\r\nDistinction\r\n2023\r\n\r\n\r\nINFS 1028\r\nProfessional Practice in Data Analytics\r\nCurrently studying\r\nINFT 2067\r\n\r\n\r\nMATH 2032\r\n\r\n\r\nINFT 2066\r\n\r\n\r\n2024\r\n\r\n\r\nINFT 2068\r\n\r\n\r\nCOMP 1048\r\n\r\n\r\nINFS 1029\r\n\r\n\r\nCOMP 2033\r\n\r\n\r\n2025\r\n\r\n\r\nINFS 3080\r\n\r\n\r\nINFS 3081\r\n\r\n\r\nINFS 2049\r\n\r\n\r\nINFS 3089\r\n\r\n\r\n2026\r\n\r\n\r\nINFT 3040\r\n\r\n\r\nINFT 3046\r\n\r\n\r\nINFS 3087\r\n\r\n\r\nINFS 3088\r\n\r\n\r\nINFT 3039\r\n\r\n\r\nThis page last updated: 2022-12-18\r\n\r\n\r\n\r\n",
     "preview": "posts/2022-09-18-bachelor-of-data-analytics/unisa_course_2022-12-18.png",
     "last_modified": "2023-01-12T07:45:47+11:00",
-    "input_file": "bachelor-of-data-analytics.knit.md",
+    "input_file": {},
     "preview_width": 1200,
     "preview_height": 800
   },

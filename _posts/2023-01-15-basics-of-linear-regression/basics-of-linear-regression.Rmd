@@ -1,0 +1,22 @@
+---
+title: "Basics of Linear Regression"
+description: |
+  A short description of the post.
+author:
+  - name: Mike Hudson
+    url: https://mike-distill-blog.netlify.app/
+date: 2023-01-15
+categories:
+  - linear regression
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Based on [Udemy](https://www.udemy.com/course/machlearn1/learn/lecture/2897930#overview) tutorial by Professor Charles Redmond, Mercyhurst University.
+

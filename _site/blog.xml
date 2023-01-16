@@ -7,7 +7,16 @@
     <description>Blog by Mike
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 11 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Basics of Linear Regression</title>
+      <dc:creator>Mike Hudson</dc:creator>
+      <link>https://mike-distill-blog.netlify.app/posts/2023-01-15-basics-of-linear-regression</link>
+      <description>A short description of the post.</description>
+      <category>linear regression</category>
+      <guid>https://mike-distill-blog.netlify.app/posts/2023-01-15-basics-of-linear-regression</guid>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>TS Forecasting Part 1</title>
       <dc:creator>Mike Hudson</dc:creator>
